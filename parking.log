@@ -1,0 +1,321 @@
+2026-05-25 12:43:19,755 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:43:19,755 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:43:57,085 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:43:57,085 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:44:49,090 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:44:49,090 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:46:22,604 - ERROR - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:46:22,604 - ERROR - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:46:34,997 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:46:34,997 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:49:23,958 - ERROR - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:49:23,958 - ERROR - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:49:30,882 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:49:30,882 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:49:52,806 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:49:52,807 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:55:59,818 - ERROR -liste_vehicules.py:17 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:55:59,821 - ERROR -liste_vehicules.py:59 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'transactions.json'
+2026-05-25 12:56:01,078 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 12:56:01,080 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:01,080 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 12:56:15,357 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 12:56:15,358 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:15,358 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:15,358 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 12:56:16,359 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:16,362 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:16,362 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 12:56:53,729 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:53,729 - ERROR -comm.py:15 - Une erreur est survenue:
+[Errno 2] No such file or directory: 'db.json'
+2026-05-25 12:56:53,730 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 12:56:59,735 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 12:56:59,735 - INFO -logsconfig.py:30 - Nb de place restantes : 4 /5
+2026-05-25 12:57:01,599 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 12:57:03,122 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 12:57:03,122 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 12:57:16,945 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 12:57:17,044 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE ENTREE
+2026-05-25 12:57:18,298 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 12:58:00,678 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 12:58:00,696 - ERROR -threading.py:994 - Une erreur est survenue:
+'int' object has no attribute 'lower'
+2026-05-25 12:58:00,790 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> ERREUR
+2026-05-25 12:58:02,233 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> ACCES ACCEPTE
+2026-05-25 12:58:02,243 - ERROR -threading.py:994 - Une erreur est survenue:
+'int' object has no attribute 'lower'
+2026-05-25 12:58:02,380 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> ERREUR
+2026-05-25 12:58:08,706 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> ACCES ACCEPTE
+2026-05-25 12:58:08,721 - ERROR -threading.py:994 - Une erreur est survenue:
+'int' object has no attribute 'lower'
+2026-05-25 12:58:08,782 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> ERREUR
+2026-05-25 12:58:26,554 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> IDLE
+2026-05-25 13:00:18,979 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:00:21,649 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:00:21,649 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:00:25,852 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 13:00:25,852 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 13:00:26,853 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 13:01:39,985 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 13:01:45,989 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 13:01:45,989 - INFO -logsconfig.py:30 - Nb de place restantes : 3 /5
+2026-05-25 13:01:48,499 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:01:50,472 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:01:50,472 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 13:03:02,501 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:03:02,507 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE SORTIE
+2026-05-25 13:03:04,219 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 13:03:04,219 - INFO -logsconfig.py:36 - Nb de place restantes : 4 /5
+2026-05-25 13:03:05,811 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:03:05,811 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 13:04:39,809 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:04:41,496 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:04:41,496 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:06:30,783 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 13:06:30,783 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 13:06:31,784 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 13:09:32,790 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 13:09:38,795 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 13:09:38,797 - INFO -logsconfig.py:30 - Nb de place restantes : 3 /5
+2026-05-25 13:09:40,500 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:09:42,454 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:09:42,454 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 13:09:48,281 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:09:48,288 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE SORTIE
+2026-05-25 13:09:53,990 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 13:09:53,991 - INFO -logsconfig.py:36 - Nb de place restantes : 4 /5
+2026-05-25 13:09:55,565 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:09:55,566 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 13:25:18,367 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:25:19,952 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:25:19,953 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:36:35,515 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:37:08,311 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:38:21,371 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:39:47,322 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:40:04,224 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:41:13,816 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:45:13,050 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:46:05,019 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:46:07,154 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:46:07,155 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:46:15,367 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 13:46:15,368 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 13:46:16,370 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 13:46:24,327 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:46:24,328 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:46:57,110 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:46:59,191 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:46:59,192 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:47:54,993 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 13:47:56,861 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:47:56,862 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 13:48:08,080 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 13:48:08,083 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 13:48:09,087 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 13:50:39,996 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 13:50:46,005 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 13:50:46,006 - INFO -logsconfig.py:30 - Nb de place restantes : 3 /5
+2026-05-25 13:50:47,744 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:50:49,526 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:50:49,527 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 13:51:06,993 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 13:51:07,082 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE ENTREE
+2026-05-25 13:51:08,198 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 13:53:49,708 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 13:53:49,713 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 14:23:58,819 - INFO -logsmtp.py:54 - API bien connecte
+2026-05-25 14:24:00,411 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:24:00,411 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 14:24:03,616 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 14:24:03,617 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 14:24:04,618 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 14:33:46,911 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 14:33:48,429 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:33:48,429 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 14:33:51,635 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 14:33:51,635 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 14:33:52,649 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 14:34:19,081 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 14:34:25,092 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 14:34:25,092 - INFO -logsconfig.py:30 - Nb de place restantes : 2 /5
+2026-05-25 14:34:26,670 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:34:28,072 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:34:28,073 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 14:35:38,523 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:40:02,398 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 14:40:03,852 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:40:03,852 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 14:40:45,126 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 14:40:45,126 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 14:40:46,131 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 14:41:44,899 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 14:41:50,914 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 14:41:50,914 - INFO -logsconfig.py:30 - Nb de place restantes : 1 /5
+2026-05-25 14:41:52,483 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:41:53,975 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:41:53,975 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 14:42:03,004 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:42:03,015 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE SORTIE
+2026-05-25 14:42:08,729 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 14:42:08,730 - INFO -logsconfig.py:36 - Nb de place restantes : 2 /5
+2026-05-25 14:42:10,182 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:42:10,182 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 14:42:52,749 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> FERME
+2026-05-25 14:43:01,723 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:43:01,723 - INFO -logsconfig.py:45 - Changement d'etat : FERME ---> IDLE
+2026-05-25 14:49:58,667 - ERROR -logsconfig.py:52 - Une erreur API est survenue:
+HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Montreal&appid=??????&units=metric&lang=fr (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff845fc2f0>: Failed to resolve 'api.oenweathermap.org' ([Errno -2] Name or service not known)"))
+2026-05-25 14:51:21,607 - ERROR -ui_pygame.py:25 - Une erreur API est survenue:
+HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Montreal&appid=??????&units=metric&lang=fr (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ffefedfc2f0>: Failed to resolve 'api.oenweathermap.org' ([Errno -2] Name or service not known)"))
+2026-05-25 14:58:22,969 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 14:58:24,486 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 14:58:24,486 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:16:22,447 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:16:22,448 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 15:16:23,450 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:17:25,963 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 15:17:31,974 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 15:17:31,974 - INFO -logsconfig.py:30 - Nb de place restantes : 1 /5
+2026-05-25 15:17:34,674 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:17:36,517 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:17:36,517 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 15:17:57,007 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:17:57,058 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE ENTREE
+2026-05-25 15:17:58,099 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:18:17,112 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 15:18:23,210 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 15:18:23,216 - INFO -logsconfig.py:30 - Nb de place restantes : 0 /5
+2026-05-25 15:18:24,999 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:18:26,631 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:18:26,636 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 15:18:37,988 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:18:38,086 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE ENTREE
+2026-05-25 15:18:44,646 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:18:46,759 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:18:48,427 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:18:48,432 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> IDLE
+2026-05-25 15:18:56,777 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:18:56,867 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 15:19:03,533 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:19:06,093 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:19:08,092 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:19:08,092 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> IDLE
+2026-05-25 15:19:26,231 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:19:26,231 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE SORTIE
+2026-05-25 15:19:31,948 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 15:19:31,948 - INFO -logsconfig.py:36 - Nb de place restantes : 1 /5
+2026-05-25 15:19:33,563 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:19:33,564 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 15:20:18,286 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:20:18,286 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE SORTIE
+2026-05-25 15:20:23,796 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 15:20:23,797 - INFO -logsconfig.py:36 - Nb de place restantes : 2 /5
+2026-05-25 15:20:25,277 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:20:25,277 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 15:20:33,011 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:20:33,011 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE SORTIE
+2026-05-25 15:20:38,521 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 15:20:38,521 - INFO -logsconfig.py:36 - Nb de place restantes : 3 /5
+2026-05-25 15:20:40,132 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:20:40,132 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 15:21:00,369 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ERREUR
+2026-05-25 15:23:59,187 - ERROR -threading.py:994 - Une erreur est survenue:
+invalid literal for int() with base 10: ''
+2026-05-25 15:24:39,494 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:24:39,495 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> ATTENTE ENTREE
+2026-05-25 15:24:40,496 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:24:41,296 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:24:41,297 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:24:46,393 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 15:24:48,866 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:24:48,867 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:24:55,075 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ERREUR
+2026-05-25 15:25:37,725 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:25:37,726 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:25:42,318 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 15:25:43,781 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:25:43,781 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:25:55,002 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:25:55,006 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 15:25:56,008 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:26:44,006 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 15:26:50,015 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 15:26:50,018 - INFO -logsconfig.py:30 - Nb de place restantes : 2 /5
+2026-05-25 15:26:51,516 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:26:52,925 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:26:52,926 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 15:27:05,189 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:27:05,194 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> IDLE
+2026-05-25 15:27:11,850 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> FERME
+2026-05-25 15:27:33,347 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:27:33,352 - INFO -logsconfig.py:45 - Changement d'etat : FERME ---> IDLE
+2026-05-25 15:28:27,976 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:28:27,988 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE SORTIE
+2026-05-25 15:28:33,705 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 15:28:33,705 - INFO -logsconfig.py:36 - Nb de place restantes : 3 /5
+2026-05-25 15:28:35,108 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:28:35,109 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 15:28:40,712 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:28:40,712 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE SORTIE
+2026-05-25 15:28:46,217 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-05-25 15:28:46,217 - INFO -logsconfig.py:36 - Nb de place restantes : 4 /5
+2026-05-25 15:28:47,661 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:28:47,661 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-05-25 15:31:58,829 - ERROR -ui_pygame.py:25 - Une erreur API est survenue:
+HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Montreal&appid=??????&units=metric&lang=fr (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff6e52c2f0>: Failed to resolve 'api.oenweathermap.org' ([Errno -2] Name or service not known)"))
+2026-05-25 15:35:45,536 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 15:35:47,124 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:35:47,125 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:35:50,330 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ERREUR
+2026-05-25 15:35:53,962 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:35:53,962 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> IDLE
+2026-05-25 15:36:16,190 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ERREUR
+2026-05-25 15:36:23,797 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:36:23,798 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> IDLE
+2026-05-25 15:36:32,009 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:36:32,009 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 15:36:33,013 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:37:34,989 - INFO -logsconfig.py:50 - API bien connecte
+2026-05-25 15:37:36,807 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:37:36,807 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:37:40,614 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-05-25 15:37:40,614 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-05-25 15:37:41,215 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-05-25 15:37:54,203 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-05-25 15:37:59,814 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-05-25 15:37:59,815 - INFO -logsconfig.py:30 - Nb de place restantes : 3 /5
+2026-05-25 15:38:01,603 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:38:03,356 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:38:03,356 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-05-25 15:38:37,894 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ERREUR
+2026-05-25 15:38:40,936 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:38:40,936 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> IDLE
+2026-05-25 15:38:49,814 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-05-25 15:38:49,814 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-05-25 15:44:34,619 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com

@@ -1,0 +1,14 @@
+[
+    {
+        "vehicule_id": "4321",
+        "heure_arrivee": 1779737204,
+        "heure_depart": 1779739604,
+        "duree": 240
+    },
+    {
+        "vehicule_id": "YYYYY",
+        "heure_arrivee": 1779737874,
+        "heure_depart": 1779738274,
+        "duree": 40
+    }
+]

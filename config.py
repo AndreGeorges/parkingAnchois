@@ -1,0 +1,57 @@
+
+# garder ici les informations sensibles, comme les emails, passwords, cle API, etc
+sender_email = 'info.lpleboeuf@gmail.com'
+recipient_email = 'info.lpleboeuf@gmail.com'
+app_password ='xtmo gtar lvrb hdcq'
+
+API_KEY = "6f5141d25c26266aa4224c7c9028432a"
+
+city = "Montreal"
+lang = "fr"
+
+# les tarifs sont appeles dans le main.py et dans le pygame pour affichage
+TARIFS = {
+    1:4,
+    2:6,
+    4:10,
+    8:18,
+    24:30
+}
+
+# sont appeles dans le pygame
+COLOR = {
+    "BLUE" : (10,29,121),
+    "WHITE" : (216, 229, 253),
+    "BLACK" : (50,50,50),
+    "VERT" : (135,238,169),
+    "VERT_POMME" : (128, 255, 0),
+    "JAUNE" : (230, 249, 138),
+    "ORANGE" : (243,133,78),
+    "GRIS" : (160, 160, 160),
+    "VIOLET" : (153, 51, 255),
+    "ROUGE" : (255,0,0),
+    "BRUN" : (153,0,0)
+}
+
+# sont appeles dans le pygame pour affichage
+SCREEN_COLOR = {
+    "IDLE" : COLOR["VERT"],
+    "ATTENTE ENTREE": COLOR["JAUNE"],
+    "PAIEMENT ENTREE": COLOR["ORANGE"],
+    "ACCES ACCEPTE" : COLOR["VERT_POMME"],
+    "STATIONNEMENT" : COLOR["GRIS"],
+    "ATTENTE SORTIE" : COLOR["VIOLET"],
+    "ERREUR" : COLOR["ROUGE"],
+    "FERME" : COLOR["BRUN"]
+}
+# sont appeles dans le pygame pour affichage
+BOUTONS_PHYSIQUES = {
+    1: "detecte vehicule entree",
+    2: "selection duree",
+    3: "confirmer paiement",
+    4: "detecte vehicule sortie",
+    5: "annulation",
+    6: "declencher erreur",
+    7: "passage erreur-idle",
+    8: "toggle idle-ferme"
+}
