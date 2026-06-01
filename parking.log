@@ -348,3 +348,8 @@ HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceede
 2026-06-01 10:30:35,109 - INFO -logsconfig.py:45 - Changement d'etat : FERME ---> IDLE
 2026-06-01 10:35:51,732 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
 2026-06-01 10:35:51,733 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 11:51:25,825 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 11:51:27,364 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 11:51:27,365 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 11:51:31,669 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 11:51:31,669 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
