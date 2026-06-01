@@ -353,3 +353,33 @@ HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceede
 2026-06-01 11:51:27,365 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
 2026-06-01 11:51:31,669 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
 2026-06-01 11:51:31,669 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 12:15:18,830 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 12:15:20,151 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 12:15:20,152 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 12:15:26,858 - ERROR -utils.py:10 - Une erreur est survenue:
+(250, b'2.0.0 OK  1780330526 41be03b00d2f7-c859391cbfbsm6709726a12.17 - gsmtp')
+2026-06-01 12:15:26,859 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 12:17:23,219 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 12:17:24,559 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 12:17:24,560 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 12:18:13,104 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 12:18:13,105 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:35:31,714 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:35:31,714 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:36:06,525 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:36:06,526 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:36:22,663 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 14:36:24,099 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:36:24,099 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:37:36,979 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:37:36,979 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:40:52,013 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 14:40:53,610 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:40:53,611 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 14:40:55,548 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 14:40:55,549 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 15:15:35,413 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-01 15:15:37,821 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 15:15:37,822 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-01 15:15:39,572 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-01 15:15:39,573 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE

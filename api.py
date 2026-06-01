@@ -2,8 +2,15 @@ import io
 import requests
 import pygame
 from logsconfig import logapi
-
 from config import API_KEY, city, lang
+# import yaml
+
+# with open("config.yaml", "r", encoding="utf-8") as file:
+#     config = yaml.safe_load(file)
+    
+# city = config["city"]
+# lang = config["lang"]
+# API_KEY = config["API_KEY"]
 
 # cette fonction appelle openweathermap . elle est importee dans ui_pygame
 def get_weather():

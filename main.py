@@ -13,7 +13,6 @@ import ui_pygame
 from logsconfig import logerreur
 from comm import sendEmail
 
-
 # initialisation necessaire de certaines variables
 etat = Etats.IDLE
 etat_precedent = None

@@ -5,6 +5,11 @@ from config import API_KEY, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
 from api import get_weather
 from liste_vehicules import *
 from utils import get_screen_color, draw_keyboard, get_color, get_tarif,draw_button,liste_bouton,bouton_accueil,eviter_surcharge_etat
+# import yaml
+
+# with open("config.yaml", "r", encoding="utf-8") as file:
+#     config = yaml.safe_load(file)
+
 
 pygame.init()
 import io  # pour que l'image de weathermap.org s'affiche
