@@ -1,8 +1,8 @@
 import io
 import requests
 import pygame
-from logsconfig import logapi
-from config import API_KEY, city, lang
+from config.logsconfig import logapi
+from config.config import API_KEY, city, lang
 # import yaml
 
 # with open("config.yaml", "r", encoding="utf-8") as file:

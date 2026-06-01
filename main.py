@@ -3,14 +3,14 @@ from time import sleep, time
 from datetime import datetime
 from etats import Etats, Event
 from gpio_manager import *
-from config import sender_email, recipient_email, app_password, TARIFS 
+from config.config import sender_email, recipient_email, app_password, TARIFS 
 from utils import eviter_surcharge_etat, eviter_surcharge_event, get_tarif
 from liste_vehicules import liste_vehicules, afficher_vehicules, transactions
 from crud import ajouter_vehicule, supprimer_vehicule, verification_ticket, sortir_vehicule, sauvegarder_transactions
 import threading
 from shared_state import update_data, get_data     # echanger les donnes avec pygame via shared_state
 import ui_pygame
-from logsconfig import logerreur
+from config.logsconfig import logerreur
 from comm import sendEmail
 
 # initialisation necessaire de certaines variables

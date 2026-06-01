@@ -1,7 +1,7 @@
 import pygame
 from datetime import datetime
 import requests
-from config import API_KEY, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
+from config.config import API_KEY, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
 from api import get_weather
 from liste_vehicules import *
 from utils import get_screen_color, draw_keyboard, get_color, get_tarif,draw_button,liste_bouton,bouton_accueil,eviter_surcharge_etat

@@ -1,6 +1,6 @@
 import pygame
-from config import TARIFS, SCREEN_COLOR, COLOR
-from logsconfig import logchetat, logevent
+from config.config import TARIFS, SCREEN_COLOR, COLOR
+from config.logsconfig import logchetat, logevent
 from comm import sendEmail
 
 # cette fonction evite au logging de se repeter

@@ -2,7 +2,7 @@ import json
 import os
 import threading
 from time import time, sleep, perf_counter
-from logsconfig import logerreur
+from config.logsconfig import logerreur
 
 
 # communique avec le json pour charger les vehicules
