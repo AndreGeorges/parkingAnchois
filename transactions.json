@@ -88,5 +88,15 @@
         "heure": "15:37:59",
         "vehicule_id": "YYYYY",
         "evenement": "Vehicule enregistre, ticket fourni"
+    },
+    {
+        "heure": "10:28:13",
+        "vehicule_id": "H1W3C6",
+        "evenement": "Vehicule enregistre, ticket fourni"
+    },
+    {
+        "heure": "10:28:40",
+        "vehicule_id": "YYYYY",
+        "evenement": "vehicule sorti"
     }
 ]
