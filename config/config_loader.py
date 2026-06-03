@@ -6,11 +6,13 @@ with open("config.yaml", "r") as y:
 TARIFS = CONFIG["TARIFS"]
 
 # pour openweathermap
-API_KEY = CONFIG["API_KEY"]
-city = CONFIG["city"]
-lang = CONFIG["lang"]
+OPENWEATHER = CONFIG["openweathermap"]
+# API_KEY = CONFIG["API_KEY"]
+# city = CONFIG["city"]
+# lang = CONFIG["lang"]
 
 # garder ici les informations sensibles, comme les emails, passwords, cle API, etc
+# email = CONFIG["email"]
 sender_email = CONFIG["sender_email"]
 recipient_email = CONFIG["recipient_email"]
 app_password = CONFIG["app_password"]

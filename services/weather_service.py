@@ -2,25 +2,18 @@ import io
 import requests
 import pygame
 from models.logger_manager import logapi
-from config.config_loader import API_KEY, city, lang
-# import yaml
+from config.config_loader import OPENWEATHER
 
-# with open("config.yaml", "r", encoding="utf-8") as file:
-#     config = yaml.safe_load(file)
-    
-# city = config["city"]
-# lang = config["lang"]
-# API_KEY = config["API_KEY"]
 
 # cette fonction appelle openweathermap . elle est importee dans ui_pygame
 def get_weather():
     try:  #pour vérifier et logger les Erreurs
         url = (
             f"https://api.openweathermap.org/data/2.5/weather"
-            f"?q={city}"        # definie dans config.py
-            f"&appid={API_KEY}"        # la cle se trouve dans config.py comme le veut la pratique de cacher les infos sensibles
+            f"?q={OPENWEATHER['city']}"        # definie dans config.py
+            f"&appid={OPENWEATHER['API_KEY']}"        # la cle se trouve dans config.py comme le veut la pratique de cacher les infos sensibles
             f"&units=metric"
-            f"&lang={lang}"  # definie dans config.py
+            f"&lang={OPENWEATHER['lang']}"  # definie dans config.py
         )
 
         response = requests.get(url,timeout=5) # timeout donne 5 secondes max pour se connecter
@@ -54,8 +47,8 @@ def get_weather():
             "temperature": temperature,
             "description": description,
             "image": image,        # image de l'icone
-            "city": city,
-            "lang": lang,
+            "city": OPENWEATHER['city'],
+            "lang": OPENWEATHER['lang'],
         }
     
        

@@ -1,7 +1,7 @@
 import pygame
 from datetime import datetime
 import requests
-from config.config_loader import API_KEY, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
+from config.config_loader import OPENWEATHER, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
 from services.weather_service import get_weather
 # from liste_vehicules import *
 from models.vehicle import *

@@ -658,3 +658,9 @@ LED is closed or uninitialized
 2026-06-03 15:43:04,498 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
 2026-06-03 15:43:16,174 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
 2026-06-03 15:43:16,175 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 16:05:57,893 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 16:06:53,468 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 16:06:54,912 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:06:54,912 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 16:07:04,385 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:07:04,385 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
