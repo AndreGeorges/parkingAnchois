@@ -669,3 +669,17 @@ LED is closed or uninitialized
 2026-06-03 16:17:47,293 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
 2026-06-03 16:19:05,313 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
 2026-06-03 16:19:05,314 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 16:35:26,824 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 16:35:28,180 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:35:28,180 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 16:35:32,589 - INFO -logger_manager.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-03 16:35:32,596 - INFO -logger_manager.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-03 16:35:33,202 - INFO -logger_manager.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-03 16:35:50,111 - INFO -logger_manager.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-06-03 16:35:55,717 - INFO -logger_manager.py:29 - Un vehicule est entre dans le stationnement
+2026-06-03 16:35:55,717 - INFO -logger_manager.py:30 - Nb de place restantes : 2 /5
+2026-06-03 16:35:57,072 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:35:58,508 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:35:58,508 - INFO -logger_manager.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-06-03 16:36:15,862 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 16:36:15,868 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE

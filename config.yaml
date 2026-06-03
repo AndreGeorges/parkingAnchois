@@ -63,3 +63,19 @@ BOUTONS_PHYSIQUES:
     7:  passage erreur-idle  
     8:  toggle idle-ferme 
 
+gpio:
+  capt_veh_entre: 25
+  select_duree: 9
+  confirm_paiement: 11
+  capt_veh_sort: 5
+  annul: 6
+  erreur: 13
+  err_idle: 19
+  idle_ferme: 26
+
+  led_verte: 14
+  led_jaune: 15
+  led_rouge: 18
+
+  buzzer: 17
+  servo: 27

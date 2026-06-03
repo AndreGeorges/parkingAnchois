@@ -10,5 +10,11 @@
         "heure_arrivee": 1780512958,
         "heure_depart": 1780513058,
         "duree": 10
+    },
+    {
+        "vehicule_id": "665TYY",
+        "heure_arrivee": 1780518950,
+        "heure_depart": 1780519750,
+        "duree": 80
     }
 ]

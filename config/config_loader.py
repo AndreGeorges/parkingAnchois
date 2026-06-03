@@ -26,3 +26,5 @@ SCREEN_COLOR = {
 
 # sont appeles dans le pygame pour affichage
 BOUTONS_PHYSIQUES = CONFIG["BOUTONS_PHYSIQUES"]
+
+GPIO = CONFIG["gpio"]

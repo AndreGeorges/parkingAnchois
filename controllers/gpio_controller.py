@@ -1,22 +1,22 @@
 from gpiozero import LED, Button, Buzzer, Servo, AngularServo
 from time import sleep, time
+from config.config_loader import GPIO
 
-# les pins du gpio
-capt_veh_entre = Button(25, pull_up=True)
-select_duree = Button(9, pull_up=True)
-confirm_paiement = Button(11, pull_up=True)
-capt_veh_sort = Button(5, pull_up=True)
-annul = Button(6, pull_up=True)
-erreur = Button(13, pull_up=True)
-err_idle = Button(19, pull_up=True)
-idle_ferme = Button(26, pull_up=True)
+capt_veh_entre = Button(GPIO["capt_veh_entre"], pull_up=True)
+select_duree = Button(GPIO["select_duree"], pull_up=True)
+confirm_paiement = Button(GPIO["confirm_paiement"], pull_up=True)
+capt_veh_sort = Button(GPIO["capt_veh_sort"], pull_up=True)
+annul = Button(GPIO["annul"], pull_up=True)
+erreur = Button(GPIO["erreur"], pull_up=True)
+err_idle = Button(GPIO["err_idle"], pull_up=True)
+idle_ferme = Button(GPIO["idle_ferme"], pull_up=True)
 
-led_verte = LED(14)
-led_jaune = LED(15)
-led_rouge = LED(18)
+led_verte = LED(GPIO["led_verte"])
+led_jaune = LED(GPIO["led_jaune"])
+led_rouge = LED(GPIO["led_rouge"])
 
-buzzer = Buzzer(17)
-servo = AngularServo(27, min_angle = -45, max_angle = 45)
+buzzer = Buzzer(GPIO["buzzer"])
+servo = AngularServo(GPIO["servo"], min_angle=-45, max_angle=45)
 
 # mets toutes les variables a off  au depart pour eviter un comportement aleatoire
 led_verte.off()
