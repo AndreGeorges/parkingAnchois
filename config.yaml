@@ -9,7 +9,7 @@ security:
     super_admin_password: "superadmin123"
     max_tentatives: 3
 
-# email:
+
 sender_email:  "info.lpleboeuf@gmail.com "
 recipient_email :  "info.lpleboeuf@gmail.com "
 app_password : "xtmo gtar lvrb hdcq"

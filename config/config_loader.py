@@ -7,9 +7,6 @@ TARIFS = CONFIG["TARIFS"]
 
 # pour openweathermap
 OPENWEATHER = CONFIG["openweathermap"]
-# API_KEY = CONFIG["API_KEY"]
-# city = CONFIG["city"]
-# lang = CONFIG["lang"]
 
 # garder ici les informations sensibles, comme les emails, passwords, cle API, etc
 # email = CONFIG["email"]
