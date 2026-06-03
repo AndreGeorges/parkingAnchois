@@ -1,6 +1,6 @@
 
 parking:
-    capacite_max: 5
+    capacite_max: 8
 
 # le tkinter viendra chercher ces infos ici:
 security:
@@ -79,3 +79,6 @@ gpio:
 
   buzzer: 17
   servo: 27
+
+durations:
+  disponibles: [1, 2, 4, 8, 24]

@@ -133,5 +133,10 @@
         "heure": "16:35:55",
         "vehicule_id": "665TYY",
         "evenement": "Vehicule enregistre, ticket fourni"
+    },
+    {
+        "heure": "18:35:47",
+        "vehicule_id": "20260603",
+        "evenement": "vehicule sorti"
     }
 ]

@@ -3,7 +3,7 @@ from time import sleep, time
 from datetime import datetime
 from models.state_machine import Etats, Event
 from controllers.gpio_controller import *
-from config.config_loader import sender_email, recipient_email, app_password, TARIFS 
+from config.config_loader import sender_email, recipient_email, app_password, TARIFS, DURATIONS, CAPACITE_MAX
 from controllers.state_controller import eviter_surcharge_etat, eviter_surcharge_event
 from config.ui_config import get_tarif
 from models.vehicle import liste_vehicules, afficher_vehicules, transactions
@@ -128,7 +128,7 @@ def parking_system():
                 update_data(                  # update_data se trouve dans shared_state et fait passer les variables globales ci-haut
                     etat=etat.value if hasattr(etat, "value") else str(etat),
                     event=event.value if hasattr(event, "value") else str(event),
-                    places=5 - len(liste_vehicules),
+                    places= CAPACITE_MAX - len(liste_vehicules),
                     tarif=tarif,
                     vehicule_id=vehicule_id,
                     file_attente=list(liste_vehicules),
@@ -219,7 +219,7 @@ def parking_system():
 
                     case Etats.ATTENTE_ENTREE:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
-                        if len(liste_vehicules) >= 5:
+                        if len(liste_vehicules) >= CAPACITE_MAX:
                             rouge()
                             update_data(message="Le parking est plein; veuillez revenir plus tard")
                             sleep(5)
@@ -228,7 +228,7 @@ def parking_system():
                             
                         else:
                             jaune()
-                            update_data(message=f"Il y a {5 - len(liste_vehicules)} place(s) disponible(s).")
+                            update_data(message=f"Il y a {CAPACITE_MAX - len(liste_vehicules)} place(s) disponible(s).")
                             event = Event.PLACE_DISPONIBLE
                             sleep(0.5)
 

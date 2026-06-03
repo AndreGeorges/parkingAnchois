@@ -10,7 +10,6 @@ parkinganchois/
 │   ├── __init__.py
 │   └── config_loader.py        *** ancien config.py
 │   └── ui_config.py            ***  get_tarif() get_screen_color() get_color()         
-|   |----logsconfig.py
 
 │
 ├── models/

@@ -1,18 +1,12 @@
 import pygame
 from datetime import datetime
 import requests
-from config.config_loader import OPENWEATHER, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
+from config.config_loader import OPENWEATHER, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES, DURATIONS, CAPACITE_MAX
 from services.weather_service import get_weather
-# from liste_vehicules import *
 from models.vehicle import *
 from config.ui_config import get_color
 from config.ui_config import   get_screen_color, get_color, get_tarif
 from controllers.state_controller import eviter_surcharge_etat, eviter_surcharge_event
-# import yaml
-
-# with open("config.yaml", "r", encoding="utf-8") as file:
-#     config = yaml.safe_load(file)
-
 
 pygame.init()
 import io  # pour que l'image de weathermap.org s'affiche
@@ -35,7 +29,7 @@ weather = get_weather()   # recupere la weather qui est dans API. et le met dans
 clock = pygame.time.Clock()
 
 etat_pg = "IDLE"
-place_pg = 5
+place_pg = CAPACITE_MAX
 input_text = ""    # recueille le texte entre au clavier numerique par l'utilisateur
 
 
@@ -206,7 +200,7 @@ while running:
     screen.blit(text, (marge_gauche, 40))
 
     # on utilise la variable place_pg issue de     place_pg = shared["places"] (v. plus haut)
-    text = font.render(f"Nb de places restantes: {place_pg} / 5", True, get_color("BLUE"))
+    text = font.render(f"Nb de places restantes: {place_pg} / {CAPACITE_MAX}", True, get_color("BLUE"))
     screen.blit(text, (marge_gauche, 80))
 
     # affiche TARIFS

@@ -2,6 +2,7 @@ import yaml
 
 with open("config.yaml", "r") as y:
     CONFIG = yaml.safe_load(y)
+    
 
 TARIFS = CONFIG["TARIFS"]
 
@@ -28,3 +29,7 @@ SCREEN_COLOR = {
 BOUTONS_PHYSIQUES = CONFIG["BOUTONS_PHYSIQUES"]
 
 GPIO = CONFIG["gpio"]
+
+DURATIONS = CONFIG["durations"]["disponibles"]
+
+CAPACITE_MAX = CONFIG["parking"]["capacite_max"]
