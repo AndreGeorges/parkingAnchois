@@ -9,13 +9,15 @@ parkinganchois/
 ├── config/
 │   ├── __init__.py
 │   └── config_loader.py        *** ancien config.py
+│   └── ui_config.py            ***  get_tarif() get_screen_color() get_color()         
 |   |----logsconfig.py
+
 │
 ├── models/
 │   ├── state_machine.py        *** ancien etats.py
 │   ├── parking.py              *** ancien shared_state.py
 │   ├── vehicle.py              *** ancien liste_vehicules.py
-
+│   ├── logger_manager.py              *** ancien logsconfig.py
 │
 ├── controllers/
 │   ├── parking_controller.py   *** ancien crud.py

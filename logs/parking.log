@@ -565,3 +565,13 @@ LED is closed or uninitialized
 2026-06-03 11:02:15,920 - ERROR -state_controller.py:12 - Une erreur est survenue:
 (250, b'2.0.0 OK  1780498935 d75a77b69052e-51775e27cc7sm25314371cf.29 - gsmtp')
 2026-06-03 11:02:15,928 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 11:46:53,300 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-03 11:46:54,938 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 11:46:54,938 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 11:46:58,436 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 11:46:58,437 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 11:52:38,536 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 11:52:39,897 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 11:52:39,897 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 11:52:42,717 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 11:52:42,717 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE

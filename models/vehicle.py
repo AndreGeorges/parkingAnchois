@@ -2,7 +2,7 @@ import json
 import os
 import threading
 from time import time, sleep, perf_counter
-from config.logsconfig import logerreur
+from models.logger_manager import logerreur
 
 
 

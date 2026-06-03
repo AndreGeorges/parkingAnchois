@@ -11,7 +11,7 @@ from controllers.parking_controller import ajouter_vehicule, supprimer_vehicule,
 import threading
 from models.parking import update_data, get_data     # echanger les donnes avec pygame via shared_state
 import views.pygame_view
-from config.logsconfig import logerreur
+from models.logger_manager import logerreur
 from services.email_service import sendEmail
 from controllers.email_controller import sendEmail, send_email
 

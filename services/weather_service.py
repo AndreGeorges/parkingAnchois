@@ -1,7 +1,7 @@
 import io
 import requests
 import pygame
-from config.logsconfig import logapi
+from models.logger_manager import logapi
 from config.config_loader import API_KEY, city, lang
 # import yaml
 

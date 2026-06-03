@@ -1,6 +1,6 @@
 import pygame
 from config.config_loader import TARIFS, SCREEN_COLOR, COLOR
-from config.logsconfig import logchetat, logevent
+from models.logger_manager import logchetat, logevent
 from services.email_service import sendEmail, send_email
 
 
