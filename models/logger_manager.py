@@ -1,11 +1,12 @@
 import logging
 from models.parking import get_data
 from models.state_machine import Etats
+from config.config_loader import LOG_FILE, LOG_LEVEL, CAPACITE_MAX
 
 #logs
 logging.basicConfig(
-    filename='logs/parking.log',
-    level=logging.INFO,
+    filename=LOG_FILE,
+    level=getattr(logging, LOG_LEVEL),
     format='%(asctime)s - %(levelname)s -%(filename)s:%(lineno)d - %(message)s'
 )
 
@@ -19,7 +20,7 @@ def logevent(event):
     message_entree = "Un vehicule est entre dans le stationnement"
     message_sortie = "Un vehicule est sorti du stationnement"
     message_detection = "Un vehicule a ete detecte a l'entree du stationnement"
-    message_nbplace = f"Nb de place restantes : {nbplace} /5"
+    message_nbplace = f"Nb de place restantes : {nbplace} /{CAPACITE_MAX}"
 
     match event:
         case "Vehicule detecte":

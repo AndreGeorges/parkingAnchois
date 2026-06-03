@@ -82,3 +82,7 @@ gpio:
 
 durations:
   disponibles: [1, 2, 4, 8, 24]
+
+journal:
+    fichier: "logs/parking.log"
+    niveau: "INFO"

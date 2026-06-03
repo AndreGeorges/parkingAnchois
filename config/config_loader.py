@@ -33,3 +33,10 @@ GPIO = CONFIG["gpio"]
 DURATIONS = CONFIG["durations"]["disponibles"]
 
 CAPACITE_MAX = CONFIG["parking"]["capacite_max"]
+
+JOURNAL = CONFIG["journal"]
+LOG_FILE = JOURNAL["fichier"]
+LOG_LEVEL = JOURNAL["niveau"] 
+
+print(LOG_LEVEL)
+print(type(LOG_LEVEL))

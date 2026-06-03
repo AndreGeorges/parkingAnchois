@@ -10,5 +10,11 @@
         "heure_arrivee": 1780518950,
         "heure_depart": 1780519750,
         "duree": 80
+    },
+    {
+        "vehicule_id": "NEW123",
+        "heure_arrivee": 1780527815,
+        "heure_depart": 1780530215,
+        "duree": 240
     }
 ]
