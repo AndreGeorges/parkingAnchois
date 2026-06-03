@@ -108,5 +108,25 @@
         "heure": "21:51:22",
         "vehicule_id": "4321",
         "evenement": "vehicule sorti"
+    },
+    {
+        "heure": "12:19:06",
+        "vehicule_id": "20260603",
+        "evenement": "Vehicule enregistre, ticket fourni"
+    },
+    {
+        "heure": "12:19:54",
+        "vehicule_id": "H1W3C6",
+        "evenement": "vehicule sorti"
+    },
+    {
+        "heure": "12:43:12",
+        "vehicule_id": "QWE123",
+        "evenement": "vehicule sorti"
+    },
+    {
+        "heure": "14:56:03",
+        "vehicule_id": "WAKA",
+        "evenement": "Vehicule enregistre, ticket fourni"
     }
 ]
