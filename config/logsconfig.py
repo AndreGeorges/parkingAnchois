@@ -1,6 +1,6 @@
 import logging
-from shared_state import get_data
-from etats import Etats
+from models.parking import get_data
+from models.state_machine import Etats
 
 #logs
 logging.basicConfig(

@@ -2,8 +2,8 @@ import smtplib
 from time import time                  
 from config.config_loader import sender_email, app_password, recipient_email
 from config.logsconfig import logEmail, logerreur
-from liste_vehicules import liste_vehicules, charger
-from shared_state import get_data, update_data
+from models.vehicle import liste_vehicules, charger
+from models.parking import get_data, update_data
 from datetime import datetime
 
 

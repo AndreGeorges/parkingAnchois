@@ -2,16 +2,18 @@
 from time import sleep, time
 from datetime import datetime
 from models.state_machine import Etats, Event
-from gpio_manager import *
+from controllers.gpio_controller import *
 from config.config_loader import sender_email, recipient_email, app_password, TARIFS 
-from utils import eviter_surcharge_etat, eviter_surcharge_event, get_tarif
-from liste_vehicules import liste_vehicules, afficher_vehicules, transactions
-from crud import ajouter_vehicule, supprimer_vehicule, verification_ticket, sortir_vehicule, sauvegarder_transactions
+from controllers.state_controller import eviter_surcharge_etat, eviter_surcharge_event
+from config.ui_config import get_tarif
+from models.vehicle import liste_vehicules, afficher_vehicules, transactions
+from controllers.parking_controller import ajouter_vehicule, supprimer_vehicule, verification_ticket, sortir_vehicule, sauvegarder_transactions
 import threading
 from models.parking import update_data, get_data     # echanger les donnes avec pygame via shared_state
-import ui_pygame
+import views.pygame_view
 from config.logsconfig import logerreur
 from services.email_service import sendEmail
+from controllers.email_controller import sendEmail, send_email
 
 # initialisation necessaire de certaines variables
 etat = Etats.IDLE
