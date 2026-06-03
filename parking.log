@@ -388,3 +388,74 @@ HTTPSConnectionPool(host='api.oenweathermap.org', port=443): Max retries exceede
 2026-06-01 15:42:18,942 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
 2026-06-01 15:42:20,585 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
 2026-06-01 15:42:20,585 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:47:43,375 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 21:47:45,810 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:47:45,810 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:47:51,426 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-02 21:47:51,429 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-02 21:47:52,030 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-02 21:48:33,386 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:48:33,386 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:48:41,754 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 21:48:43,900 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:48:43,901 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:48:47,108 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-02 21:48:47,108 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-02 21:48:47,709 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-02 21:49:09,002 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-06-02 21:49:09,002 - ERROR -threading.py:994 - Une erreur est survenue:
+name 'duree' is not defined
+2026-06-02 21:49:09,002 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> ERREUR
+2026-06-02 21:49:24,908 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:49:24,908 - INFO -logsconfig.py:45 - Changement d'etat : ERREUR ---> IDLE
+2026-06-02 21:49:33,529 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-02 21:49:33,530 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-02 21:49:34,131 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-02 21:50:07,200 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:50:07,200 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:50:24,825 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 21:50:26,074 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:50:26,074 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 21:50:28,075 - INFO -logsconfig.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-02 21:50:28,076 - INFO -logsconfig.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-02 21:50:28,679 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-02 21:51:04,314 - INFO -logsconfig.py:45 - Changement d'etat : PAIEMENT ENTREE ---> ACCES ACCEPTE
+2026-06-02 21:51:09,931 - INFO -logsconfig.py:29 - Un vehicule est entre dans le stationnement
+2026-06-02 21:51:09,931 - INFO -logsconfig.py:30 - Nb de place restantes : 2 /5
+2026-06-02 21:51:12,282 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:51:13,721 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:51:13,721 - INFO -logsconfig.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
+2026-06-02 21:51:18,499 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:51:18,510 - INFO -logsconfig.py:45 - Changement d'etat : STATIONNEMENT ---> ATTENTE SORTIE
+2026-06-02 21:51:23,825 - INFO -logsconfig.py:35 - Un vehicule est sorti du stationnement
+2026-06-02 21:51:23,825 - INFO -logsconfig.py:36 - Nb de place restantes : 3 /5
+2026-06-02 21:51:25,017 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:51:25,017 - INFO -logsconfig.py:45 - Changement d'etat : ATTENTE SORTIE ---> IDLE
+2026-06-02 21:51:34,505 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 21:51:34,506 - INFO -logsconfig.py:45 - Changement d'etat : None ---> IDLE
+2026-06-02 22:30:26,233 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 22:30:28,487 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 22:30:28,488 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 22:30:33,612 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 22:30:33,612 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:08:32,568 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 23:08:34,814 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:08:34,814 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:08:36,687 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:08:36,687 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:19:52,551 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 23:19:53,759 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:19:53,760 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:19:56,330 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:19:56,331 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:36:44,120 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 23:36:45,576 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:36:45,576 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:36:48,141 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:36:48,141 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:39:56,866 - INFO -logsconfig.py:50 - API bien connecte
+2026-06-02 23:39:59,176 - INFO -logsconfig.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-02 23:39:59,176 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE
+2026-06-02 23:40:01,777 - ERROR -utils.py:10 - Une erreur est survenue:
+(250, b'2.0.0 OK  1780458001 af79cd13be357-9158a3eea49sm123469485a.44 - gsmtp')
+2026-06-02 23:40:01,778 - INFO -logsconfig.py:45 - Changement d'etat : None ---> Etats.IDLE

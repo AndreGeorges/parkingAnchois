@@ -1,5 +1,5 @@
 import pygame
-from config.config import TARIFS, SCREEN_COLOR, COLOR
+from config.config_loader import TARIFS, SCREEN_COLOR, COLOR
 from config.logsconfig import logchetat, logevent
 from comm import sendEmail
 

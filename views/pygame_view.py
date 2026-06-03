@@ -3,7 +3,8 @@ from datetime import datetime
 import requests
 from config.config_loader import API_KEY, SCREEN_COLOR, TARIFS, BOUTONS_PHYSIQUES
 from services.weather_service import get_weather
-from liste_vehicules import *
+# from liste_vehicules import *
+from models.vehicle import *
 from utils import get_screen_color, draw_keyboard, get_color, get_tarif,draw_button,liste_bouton,bouton_accueil,eviter_surcharge_etat
 # import yaml
 
