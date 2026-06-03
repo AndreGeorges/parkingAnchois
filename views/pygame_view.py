@@ -199,9 +199,6 @@ while running:
     pygame.draw.rect(overlay,(*couleur,50),(0,0,1000,800))
     screen.blit(overlay,(0,0))
 
-    # screen.fill(get_screen_color(etat_pg, SCREEN_COLOR))      # SCREEN_COLOR se trouve dans config.py
-
-
     font = pygame.font.SysFont(None, 24)
 
     # on utilise la variable etat_pg issue de     etat_pg = shared["etat"] (v. plus haut)

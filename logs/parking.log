@@ -630,3 +630,31 @@ LED is closed or uninitialized
 2026-06-03 14:56:06,834 - INFO -logger_manager.py:45 - Changement d'etat : ACCES ACCEPTE ---> STATIONNEMENT
 2026-06-03 14:56:24,105 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
 2026-06-03 14:56:24,105 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 14:58:04,134 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 15:17:04,578 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 15:17:06,063 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 15:17:06,063 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:17:11,676 - INFO -logger_manager.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-03 15:17:11,676 - INFO -logger_manager.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-03 15:17:12,278 - INFO -logger_manager.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-03 15:17:40,243 - INFO -logger_manager.py:45 - Changement d'etat : PAIEMENT ENTREE ---> IDLE
+2026-06-03 15:17:47,965 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 15:17:47,965 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:23:07,162 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 15:23:08,510 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 15:23:08,511 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:23:21,966 - INFO -logger_manager.py:26 - Un vehicule a ete detecte a l'entree du stationnement
+2026-06-03 15:23:21,979 - INFO -logger_manager.py:45 - Changement d'etat : IDLE ---> ATTENTE ENTREE
+2026-06-03 15:23:22,589 - INFO -logger_manager.py:45 - Changement d'etat : ATTENTE ENTREE ---> PAIEMENT ENTREE
+2026-06-03 15:23:30,474 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 15:23:30,474 - INFO -logger_manager.py:45 - Changement d'etat : PAIEMENT ENTREE ---> IDLE
+2026-06-03 15:23:42,957 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com
+2026-06-03 15:23:42,957 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:42:37,304 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 15:42:38,787 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 15:42:38,787 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:43:03,043 - INFO -logger_manager.py:50 - API bien connecte
+2026-06-03 15:43:04,498 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 15:43:04,498 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE
+2026-06-03 15:43:16,174 - INFO -logger_manager.py:59 - Un courriel a été envoyé a info.lpleboeuf@gmail.com 
+2026-06-03 15:43:16,175 - INFO -logger_manager.py:45 - Changement d'etat : None ---> IDLE

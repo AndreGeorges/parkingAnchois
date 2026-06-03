@@ -27,7 +27,6 @@
         8: 18 
         24: 30
 
-
 # sont appeles dans le pygame
     COLOR:
         BLUE : [10,29,121]
@@ -45,14 +44,14 @@
 
 # sont appeles dans le pygame pour affichage
     SCREEN_COLOR:
-        IDLE  :   VERT   
-        ATTENTE ENTREE :   JAUNE   
-        PAIEMENT ENTREE :   ORANGE   
-        ACCES ACCEPTE  :   VERT_POMME   
-        STATIONNEMENT  :   GRIS   
-        ATTENTE SORTIE  :   VIOLET   
-        ERREUR  :   ROUGE   
-        FERME  :   BRUN  
+        IDLE:   VERT   
+        ATTENTE ENTREE:   JAUNE   
+        PAIEMENT ENTREE:   ORANGE   
+        ACCES ACCEPTE:   VERT_POMME   
+        STATIONNEMENT:   GRIS   
+        ATTENTE SORTIE:   VIOLET   
+        ERREUR:   ROUGE   
+        FERME:   BRUN  
 
 # sont appeles dans le pygame pour affichage
     BOUTONS_PHYSIQUES:
