@@ -10,7 +10,7 @@ from config.logsconfig import logerreur
 # communique avec le json pour charger les vehicules
 def charger():
     try:
-        with open('db.json', 'r') as f:
+        with open('data/db.json', 'r') as f:
             return json.load(f) 
     except FileNotFoundError as e:
         logerreur(e)
@@ -20,7 +20,7 @@ liste_vehicules = charger()
 
 # sauvegarder les vehicules apres 
 def sauvegarder(liste_vehicules):
-    with open('db.json', 'w') as f:
+    with open('data/db.json', 'w') as f:
         json.dump(liste_vehicules, f, indent=4)
 
 # trouver index du vehicule. a voir si on peut faire sans
@@ -51,7 +51,7 @@ afficher_vehicules(liste_vehicules)
 # l'autre partie de gestion de fichier se trouve dans crud.py def sauvegarder_transactions. a voir si on peut le deplacer ici?
 def charger_transactions():
     try:
-        with open('transactions.json', 'r') as t:
+        with open('data/transactions.json', 'r') as t:
             return json.load(t) 
     except FileNotFoundError as e:
         logerreur(e) 

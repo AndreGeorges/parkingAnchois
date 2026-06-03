@@ -27,7 +27,7 @@ marge_gauche = 40
 
 screen = pygame.display.set_mode([W, H])
 pygame.display.set_caption("Stationnement OZ'Anchois")# nom au dessus de la fenetre
-image_fond = pygame.image.load("assets/fond.jpg") # image de fond avec ecrans statique
+image_fond = pygame.image.load("assets/images/fond.jpg") # image de fond avec ecrans statique
 image_fond = pygame.transform.scale(image_fond,(W,H))
 
 weather = get_weather()   # recupere la weather qui est dans API. et le met dans variable. on pourra l'appeler plus tard, ex: weather["city"]

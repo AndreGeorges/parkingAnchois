@@ -52,7 +52,7 @@ def sauvegarder_transactions(vehicule_id, event, transactions):
         "evenement": event.value
     }
     transactions.append(transaction)    # sauvegarde le fichier transaction
-    with open('transactions.json', 'w') as t:        # utilise un fichier jason pour sauvegarder les transactions
+    with open('data/transactions.json', 'w') as t:        # utilise un fichier jason pour sauvegarder les transactions
         json.dump(transactions, t, indent=4)        # acceder au trnsaction.json ici
         
     print("transaction ajoutee:  ", transaction)

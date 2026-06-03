@@ -3,8 +3,7 @@ parkinganchois/
 ├── main.py
 ├── README.md
 ├── config.yaml
-├── db.json
-├── transactions.json
+
 ├── parking.log
 │
 ├── config/
@@ -32,6 +31,13 @@ parkinganchois/
 ├── views/
 │   ├── pygame_view.py          *** ancien ui_pygame.py
 │   └── tkinter_auth_view.py    *** ancien ui_tkinter.py
+
+├── data/
+    ├── db.json
+    ├── transactions.json
+
+├── logs/
+    ├── parking.log
 │
 ├── assets/
 │   ├── images/

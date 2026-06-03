@@ -4,7 +4,7 @@ from models.state_machine import Etats
 
 #logs
 logging.basicConfig(
-    filename='parking.log',
+    filename='logs/parking.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s -%(filename)s:%(lineno)d - %(message)s'
 )
