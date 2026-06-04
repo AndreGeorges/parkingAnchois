@@ -94,3 +94,21 @@ bouton_accueil()                ---->  views/pygame_view.py
  **La procédure de lancement** 
  
  ***Les problèmes connus ou limites du projet*** 
+
+
+
+********************  NOTES SUR LE DIAGRAMME D'ETAT **************
+
+
+
+Le nombre de tentatives doit être initialisé à 0
+Le système tombe en erreur;
+le btn 7 ouvre la fenêtre tkinter ou on demande d’entrer le mot de passe
+en dessous de 3 tentatives, on boucle entre les état USER_PASSWD ( or whatever you want to call it ) et ERREUR;
+	( chaque tentative incorrecte nous ramène à ERREUR )
+	La tentative successful nous amène à l’état IDLE
+au-dessus de 3 tentatives, on boucle entre entre les états SUPERADMIN et ERREUR; 
+	( chaque tentative incorrecte nous ramène à ERREUR )
+	La tentative successful nous amène à l’état IDLE
+	Ce qui détermine qu’on reste dans cette boucle-là, c’est le nb des tentatives qui est au-dessus de 3. Voilà pourquoi il fallait l’initialiser à 0 AVANT de rentrer dans l’état ERREUR
+`
