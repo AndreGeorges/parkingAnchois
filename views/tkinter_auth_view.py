@@ -48,7 +48,7 @@ def centrer_fenetre(ecran, largeur, hauteur):
 
 
 # Fonction pour créer l'écran de saisie du code
-def ecran():
+def ecran(fenetre):
     global texte_ecran, ecran
     frame_ecran =Frame(fenetre, bg=couleur_ecran, height=50,width=200,borderwidth=5, relief="groove")  #Crée une frame pour l'écran
     frame_ecran.place(relx=0.5, rely=0.2, anchor="center")   #Place la frame en haut de la fenêtre mais décalé un peu vers le bas pour laisser un espace entre l'écran et le bord de la fenêtre
@@ -58,7 +58,7 @@ def ecran():
     ecran.place(relx=0.5, rely=0.2, anchor="center") #Place le label de l'écran au centre de la fenêtre et lui permet de s'étendre pour remplir l'espace disponible
   
 # Fonction pour créer le clavier numérique
-def draw_keyboard():
+def draw_keyboard(fenetre):
     frame_clavier = Frame(fenetre, bg=couleur_fond) #Crée une frame pour le clavier
     frame_clavier.place(relx=0.5, rely=0.55, anchor="center") #Place la frame du clavier au centre de la fenêtre              
     for i, row in enumerate(boutons_numeriques):
@@ -96,7 +96,7 @@ def annuler():
 boutons_fonctionnels = { "Valider":{"bg":"green","commande":valider},"Effacer":{"bg":"orange","commande":effacer}, "Annuler":{"bg":"red","commande":annuler}}
 
 # Fonction pour créer les boutons fonctionnels
-def draw_boutons():
+def draw_boutons(fenetre):
     global effacer, valider,boutons_fonctionnels
     frame_boutons = Frame(fenetre,bg=couleur_fond) #Crée une frame pour les boutons
     frame_boutons.place(relx=0.5,rely=0.9,anchor="center") #Place les boutons en bas de la fenêtre
@@ -104,7 +104,7 @@ def draw_boutons():
         Button(frame_boutons, text=key, width=10, height=2, font=font_texte, bg=properties["bg"], command=properties["commande"]).grid(row=0, column=i, padx=10)
     
     # Création de la Barre de titre
-def draw_barre_titre():
+def draw_barre_titre(fenetre):
     fenetre.overrideredirect(True)          # Retire les bordures et la barre de titre de la fenêtre
     frame_titre =Frame(fenetre, bg=couleur_barre_titre, height=38,borderwidth=5, relief="groove")  #Crée une frame pour la barre de titre personnalisée
     frame_titre.pack(fill="x", side="top",padx=10,pady=10)   #Place la frame en haut de la fenêtre mais décalé un peu vers le bas pour laisser un espace entre la barre de titre et le bord de la fenêtre
@@ -113,7 +113,7 @@ def draw_barre_titre():
     label_titre.pack(pady=0)   #Place le label au centre de la frame de la barre de titre personnalisée
 
 # Texte fixe qui ne change pas, pour le message "Entrez votre code : "
-def texte_fix():
+def texte_fix(fenetre):
     global label_texte
     label_texte = Label(fenetre, text=texte,bg=couleur_fond,  fg=couleur_texte, font=font_texte) #Crée un label pour le texte
     label_texte.place(relx=0.5, rely=0.12, anchor="center")  #Place le label de texte du message
@@ -136,11 +136,11 @@ def create_window():
 
 def charger_interface():
     fenetre = create_window() #Appelle la fonction pour créer la fenêtre principale
-    texte_fix() #Appelle la fonction pour créer le texte fixe
-    draw_barre_titre() #Appelle la fonction pour créer la barre de titre personnalisée
-    ecran() #Appelle la fonction pour créer l'écran de saisie du code
-    draw_keyboard() #Appelle la fonction pour créer le clavier numérique
-    draw_boutons() #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
+    texte_fix(fenetre) #Appelle la fonction pour créer le texte fixe
+    draw_barre_titre(fenetre) #Appelle la fonction pour créer la barre de titre personnalisée
+    ecran(fenetre) #Appelle la fonction pour créer l'écran de saisie du code
+    draw_keyboard(fenetre) #Appelle la fonction pour créer le clavier numérique
+    draw_boutons(fenetre) #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
     fenetre.mainloop()
 
 
