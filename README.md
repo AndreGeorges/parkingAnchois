@@ -99,7 +99,7 @@ bouton_accueil()                ---->  views/pygame_view.py
 
 ********************  NOTES SUR LE DIAGRAMME D'ETAT **************
 
-
+''`
 
 Le nombre de tentatives doit être initialisé à 0
 Le système tombe en erreur;
