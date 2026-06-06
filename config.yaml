@@ -86,3 +86,17 @@ durations:
 journal:
     fichier: "logs/parking.log"
     niveau: "INFO"
+
+auth_view:
+    largeur_fenetre: 500
+    hauteur_fenetre: 700
+    nom_fenetre: "Parking OZ Anchois"
+    couleur_fond: "VERT_POMME"
+    couleur_barre_titre: "BLUE"
+    couleur_titre: "WHITE"
+    font_titre: ("Arial bold", 18,"bold italic underline")
+    couleur_texte: "BLACK"
+    font_texte: ("Arial", 14)
+    boutons_numeriques: [["1","2","3"], ["4","5","6"], ["7","8","9"], ["","0",""]]
+    couleur_ecran: "WHITE"
+    font_ecran: ("Arial", 16)

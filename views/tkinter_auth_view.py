@@ -1,31 +1,34 @@
 from tkinter import *
-
+from config.ui_config import get_color_rgb, get_AUTH
 
 # relx et rely vont placer selon les pourcentages de la fenêtre, anchor va permettre de placer le widget selon un point d'ancrage (ici le centre) 
 # padx et pady vont ajouter des marges entre les widgets
 
 
+AUTH=get_AUTH()
 # Variables de configuration de la fenêtre
 
 # fenêtre principale
-largeur_fenetre = 500
+largeur_fenetre = AUTH["largeur_fenetre"]
 hauteur_fenetre = 700
 nom_fenetre = "Parking OZ Anchois"
-couleur_fond = "lightblue"
+couleur_fond = get_color_rgb("VERT_POMME")
 # barre de titre
-couleur_barre_titre = "blue"
-couleur_titre = "white"
+couleur_barre_titre = get_color_rgb("BLUE")
+couleur_titre = get_color_rgb("WHITE")
 font_titre = ("Arial bold", 18,"bold italic underline")
 # texte
-couleur_texte = "black"
+couleur_texte = get_color_rgb("BLACK")
 texte = "Entrez votre code : "
 font_texte = ("Arial", 14)
 # clavier numérique
 boutons_numeriques = [["1","2","3"], ["4","5","6"], ["7","8","9"], ["","0",""]]
-code_reel =("") #Variable pour stocker le code réel entré par l'utilisateur
-couleur_ecran= "white"
+couleur_ecran= get_color_rgb("WHITE")
 font_ecran = ("Arial", 16)
 
+
+
+code_reel =("") #Variable pour stocker le code réel entré par l'utilisateur
 
 # Pour centrer la fenêtre sur l'écran 
 def centrer_fenetre(ecran, largeur, hauteur):    
@@ -68,9 +71,9 @@ def effacer():
     code_reel = code_reel[:-1]  # Supprime le dernier caractère du code réel
     texte_ecran.set("*" * len(code_reel))  # Met à jour l'affichage avec des étoiles
 
-def valider(mdp):
+def valider():
     global code_reel
-    if code_reel == mdp:  # Remplacez "1234" par le code réel que vous souhaitez utiliser
+    if code_reel == "1234":  # Remplacez "1234" par le code réel que vous souhaitez utiliser
         texte_ecran.set("Code correct !")
     else:
         texte_ecran.set("Code incorrect !")
@@ -119,16 +122,13 @@ def create_window():
                             # Cela garantit que l'utilisateur peut interagir avec la fenêtre immédiatement après son ouverture sans avoir à cliquer dessus pour lui donner le focus.
     return fenetre
 
+# Appel des fonctions pour créer les différentes parties de l'interface utilisateur
 fenetre = create_window() #Appelle la fonction pour créer la fenêtre principale
 texte_fix() #Appelle la fonction pour créer le texte fixe
 draw_barre_titre() #Appelle la fonction pour créer la barre de titre personnalisée
-# Ecran
 ecran() #Appelle la fonction pour créer l'écran de saisie du code
-# Boutons
 draw_keyboard() #Appelle la fonction pour créer le clavier numérique
 draw_boutons() #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
-
-
 
 fenetre.mainloop()
 

@@ -38,5 +38,7 @@ JOURNAL = CONFIG["journal"]
 LOG_FILE = JOURNAL["fichier"]
 LOG_LEVEL = JOURNAL["niveau"] 
 
+AUTH_VIEW = CONFIG["auth_view"]
+
 print(LOG_LEVEL)
 print(type(LOG_LEVEL))
