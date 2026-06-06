@@ -4,31 +4,39 @@ from config.ui_config import get_color_rgb, get_AUTH
 # relx et rely vont placer selon les pourcentages de la fenêtre, anchor va permettre de placer le widget selon un point d'ancrage (ici le centre) 
 # padx et pady vont ajouter des marges entre les widgets
 
+AUTH=get_AUTH() #Récupère les informations de configuration pour la vue d'authentification à partir du fichier de configuration et les stocke dans la variable AUTH.
+texte_info =AUTH["info_texte"] #Récupère les informations de configuration pour le texte de la vue d'authentification à partir du fichier de configuration et les stocke dans la variable texte_info.
 
-AUTH=get_AUTH()
-# Variables de configuration de la fenêtre
+
+#==================================== Variables de configuration de la fenêtre ====================================
 
 # fenêtre principale
 largeur_fenetre = AUTH["largeur_fenetre"]
-hauteur_fenetre = 700
-nom_fenetre = "Parking OZ Anchois"
-couleur_fond = get_color_rgb("VERT_POMME")
+hauteur_fenetre = AUTH["hauteur_fenetre"]
+nom_fenetre = AUTH["nom_fenetre"]
+couleur_fond = get_color_rgb(AUTH["couleur_fond"])
+
 # barre de titre
-couleur_barre_titre = get_color_rgb("BLUE")
-couleur_titre = get_color_rgb("WHITE")
-font_titre = ("Arial bold", 18,"bold italic underline")
+couleur_barre_titre = get_color_rgb(AUTH["couleur_barre_titre"])
+couleur_titre = get_color_rgb(AUTH["couleur_titre"])
+font_titre = (texte_info["font_titre"], texte_info["taille_titre"], texte_info["style_titre"])
+
 # texte
-couleur_texte = get_color_rgb("BLACK")
-texte = "Entrez votre code : "
-font_texte = ("Arial", 14)
+couleur_texte = get_color_rgb(AUTH["couleur_texte"])
+texte = AUTH["texte"]
+font_texte = (texte_info["font_texte"], texte_info["taille_texte"])
+
 # clavier numérique
-boutons_numeriques = [["1","2","3"], ["4","5","6"], ["7","8","9"], ["","0",""]]
-couleur_ecran= get_color_rgb("WHITE")
-font_ecran = ("Arial", 16)
-
-
+boutons_numeriques = AUTH["boutons_numeriques"]
+couleur_ecran= get_color_rgb(AUTH["couleur_ecran"])
+font_ecran = (texte_info["font_ecran"], texte_info["taille_ecran"])
 
 code_reel =("") #Variable pour stocker le code réel entré par l'utilisateur
+
+
+
+#================================ Fonctions de l'interface utilisateur ====================================
+
 
 # Pour centrer la fenêtre sur l'écran 
 def centrer_fenetre(ecran, largeur, hauteur):    
@@ -108,7 +116,7 @@ def draw_barre_titre():
 def texte_fix():
     global label_texte
     label_texte = Label(fenetre, text=texte,bg=couleur_fond,  fg=couleur_texte, font=font_texte) #Crée un label pour le texte
-    label_texte.place(relx=0.25, rely=0.12, anchor="center")  #Place le label de texte du message
+    label_texte.place(relx=0.5, rely=0.12, anchor="center")  #Place le label de texte du message
 
 # Création de la fenêtre principale
 def create_window():
@@ -122,14 +130,17 @@ def create_window():
                             # Cela garantit que l'utilisateur peut interagir avec la fenêtre immédiatement après son ouverture sans avoir à cliquer dessus pour lui donner le focus.
     return fenetre
 
-# Appel des fonctions pour créer les différentes parties de l'interface utilisateur
-fenetre = create_window() #Appelle la fonction pour créer la fenêtre principale
-texte_fix() #Appelle la fonction pour créer le texte fixe
-draw_barre_titre() #Appelle la fonction pour créer la barre de titre personnalisée
-ecran() #Appelle la fonction pour créer l'écran de saisie du code
-draw_keyboard() #Appelle la fonction pour créer le clavier numérique
-draw_boutons() #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
 
-fenetre.mainloop()
+
+#==========================Appel des fonctions pour créer les différentes parties de l'interface utilisateur==========================
+
+def charger_interface():
+    fenetre = create_window() #Appelle la fonction pour créer la fenêtre principale
+    texte_fix() #Appelle la fonction pour créer le texte fixe
+    draw_barre_titre() #Appelle la fonction pour créer la barre de titre personnalisée
+    ecran() #Appelle la fonction pour créer l'écran de saisie du code
+    draw_keyboard() #Appelle la fonction pour créer le clavier numérique
+    draw_boutons() #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
+    fenetre.mainloop()
 
 

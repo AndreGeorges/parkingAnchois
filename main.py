@@ -14,6 +14,7 @@ import views.pygame_view
 from models.logger_manager import logerreur
 from services.email_service import sendEmail
 from controllers.email_controller import sendEmail, send_email
+from views.tkinter_auth_view import charger_interface
 
 # initialisation necessaire de certaines variables
 etat = Etats.IDLE
@@ -66,7 +67,8 @@ def temps_expire():
                 break   
     sleep(0.2)   
 
- 
+def Authentification():
+    charger_interface() # cette fonction se trouve dans tkinter_auth_view et lance l'interface d'authentification
 
 
 
@@ -206,6 +208,7 @@ def parking_system():
 
                 match etat:
                     case Etats.IDLE:
+                        Authentification() # lancer l'interface d'authentification
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
                         vert()                    # dans gpiomanager. fait que allume la verte et eteint tout le reste
                         event = getEvent(etat, etat_precedent)
