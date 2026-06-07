@@ -28,7 +28,7 @@ def get_weather():
 
         icon_url = (        # aller chercher l'icone de openweathermap en temps reel. il s'update a l'ecran dans le pygame
             f"https://openweathermap.org/img/wn/"
-            f"{icon_code}@2x.pg"
+            f"{icon_code}@2x.png"
         )
 
         icon_response = requests.get(icon_url)
@@ -67,5 +67,5 @@ def get_weather():
 
     except requests.RequestException as e:      #log les erreurs API -- peut etre déclencher en retirant une lettre du url
         message = str(e)
-        message = message.replace(API_KEY,"??????")         #Sinon notre cle API apparait dans le message d'erreur   
+        message = message.replace(OPENWEATHER['API_KEY'],"??????")         #Sinon notre cle API apparait dans le message d'erreur   
         logapi(message)
