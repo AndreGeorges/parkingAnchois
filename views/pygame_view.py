@@ -7,6 +7,7 @@ from models.vehicle import *
 from config.ui_config import get_color
 from config.ui_config import   get_screen_color, get_color, get_tarif
 from controllers.state_controller import eviter_surcharge_etat, eviter_surcharge_event
+from exports.export_journal import exporter_log
 
 pygame.init()
 import io  # pour que l'image de weathermap.org s'affiche
@@ -108,14 +109,14 @@ def draw_button(screen, font):
         
         y_offset += 45
 
-def bouton_accueil(screen,font):
-    boutons_accueil = pygame.Rect(365,744,120,40)
-    accueil="ACCUEIL"
-    pygame.draw.rect(screen,get_color("VIOLET"),boutons_accueil,border_radius=10)
-    text_accueil=font.render(accueil,True, get_color("WHITE"))
-    text_accueil_rect = text_accueil.get_rect(center=boutons_accueil.center)
-    screen.blit(text_accueil,text_accueil_rect)
-    return boutons_accueil
+def bouton_Journal(screen,font):
+    boutons_journal = pygame.Rect(365,744,120,40)
+    accueil="EXP/LOG"
+    pygame.draw.rect(screen,get_color("VIOLET"),boutons_journal,border_radius=10)
+    text_journal=font.render(accueil,True, get_color("WHITE"))
+    text_journal_rect = text_journal.get_rect(center=boutons_journal.center)
+    screen.blit(text_journal,text_journal_rect)
+    return boutons_journal
 
 
 # !!! lance parking_system()  du main dans un THREAD
@@ -151,13 +152,8 @@ while running:
                 input_text = ""
 
                 #  Le bouton accueil ne fonctionne presentement pas
-            # if retour_accueil.collidepoint(event.pos):                # bouton retour a l'accueil a implementer
-            #     etat_precedent = shared["etat"]
-            #     print(etat_precedent,"ava")
-            #     update_data(etat = "IDLE")
-            #     shared=get_data()
-            #     etat = shared["etat"]
-            #     print(etat,"apre")
+            if boutons_journal.collidepoint(event.pos):                # bouton retour a l'accueil a implementer
+                exporter_log()
 
             for bouton,duree in liste_bouton:               # Boutons pour la selection de duree 
                 if bouton.collidepoint(event.pos):              #ils retournent la duree de la liste TARIF donc peuvent etre changé sans faire plein d modifications
@@ -290,7 +286,7 @@ while running:
         bouton_duree = draw_button(screen,font)
     else:
         input_box, key_rect, delete_button, enter_button = draw_keyboard(screen, font, input_text)  
-    
+    boutons_journal = bouton_Journal(screen,font)
     # le bouton accueil ne fonctionne presentement pas
     #retour_accueil = bouton_accueil(screen,font) # affiche le bouton retour a l'accueil
 

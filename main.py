@@ -16,6 +16,7 @@ from services.email_service import sendEmail
 from controllers.email_controller import sendEmail, send_email
 from views.tkinter_auth_view import charger_interface
 
+
 # initialisation necessaire de certaines variables
 etat = Etats.IDLE
 etat_precedent = None
