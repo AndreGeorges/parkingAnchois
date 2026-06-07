@@ -38,7 +38,10 @@ JOURNAL = CONFIG["journal"]
 LOG_FILE = JOURNAL["fichier"]
 LOG_LEVEL = JOURNAL["niveau"] 
 
+# Pour Authentification par tkinter
 AUTH_VIEW = CONFIG["auth_view"]
+
+CODE_SAISI = CONFIG["security"]
 
 print(LOG_LEVEL)
 print(type(LOG_LEVEL))

@@ -3,7 +3,7 @@ from time import sleep, time
 from datetime import datetime
 from models.state_machine import Etats, Event
 from controllers.gpio_controller import *
-from config.config_loader import sender_email, recipient_email, app_password, TARIFS, DURATIONS, CAPACITE_MAX
+from config.config_loader import sender_email, recipient_email, app_password, TARIFS, DURATIONS, CAPACITE_MAX, CODE_SAISI
 from controllers.state_controller import eviter_surcharge_etat, eviter_surcharge_event
 from config.ui_config import get_tarif
 from models.vehicle import liste_vehicules, afficher_vehicules, transactions
@@ -111,10 +111,7 @@ def getEvent(etat, etat_precedent):
         return Event.RETOUR_IDLE  
     if idle_ferme.is_pressed:
         sleep(0.5)
-        if etat == Etats.IDLE:
-            return Event.FERME
-        else:
-            return Event.RETOUR_IDLE       
+        return Event.DEMANDE_AUTH_ADMIN       
     # else:
     #     return Event.DEFAULT  # J'ai retiré ceci pour ne pas qu'il loop constamment
     
@@ -205,10 +202,14 @@ def parking_system():
                         )
                         etat = Etats.FERME
 
+                    case Event.DEMANDE_AUTH_ADMIN:
+                        event, event_precedent = eviter_surcharge_event(
+                            event, event_precedent
+                        )
+                        etat = Etats.AUTH_ADMIN
 
                 match etat:
                     case Etats.IDLE:
-                        Authentification() # lancer l'interface d'authentification
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
                         vert()                    # dans gpiomanager. fait que allume la verte et eteint tout le reste
                         event = getEvent(etat, etat_precedent)
@@ -219,6 +220,21 @@ def parking_system():
                         rouge() # dans gpiomanager.
                         event = getEvent(etat, etat_precedent)
                         sleep(0.5)
+                    
+                    case Etats.AUTH_ADMIN:
+                        etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
+                        print(etat)
+                        Authentification() # lancer l'interface d'authentification
+                        shared = get_data()
+                        code_saisi = shared["code_saisi"]
+                        print(code_saisi)
+                        if code_saisi == CODE_SAISI["admin_password"]:
+                            update_data(code_saisi="")
+                            event = Event.FERME
+                
+                        else:
+                            update_data(code_saisi="")
+                            event = Event.RETOUR_IDLE
 
                     case Etats.ATTENTE_ENTREE:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)

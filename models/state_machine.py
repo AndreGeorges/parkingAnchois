@@ -10,6 +10,9 @@ class Etats(Enum):
     STATIONNEMENT = "STATIONNEMENT"
     ATTENTE_SORTIE = "ATTENTE SORTIE"
     ERREUR = "ERREUR"
+    AUTH_ADMIN = "ADMINISTRATEUR"
+    AUTH_SUPERADMIN = "SUPER ADMIN"
+    AUTH_USAGER = "USAGER"
     
 class Event(Enum):
     DEFAULT = "defaut"
@@ -25,3 +28,4 @@ class Event(Enum):
     ERREUR = "Erreur"
     RETOUR_IDLE = "Retour a idle"
     FERME = "Ferme"
+    DEMANDE_AUTH_ADMIN = "AUTHENTIFICATION ADMIN"

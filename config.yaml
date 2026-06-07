@@ -5,8 +5,8 @@ parking:
 # le tkinter viendra chercher ces infos ici:
 security:
     code_secret: "1234567"
-    admin_password: "admin123"
-    super_admin_password: "superadmin123"
+    admin_password: "8888888"
+    super_admin_password: "5555555"
     max_tentatives: 3
 
 
@@ -51,6 +51,7 @@ SCREEN_COLOR:
     ATTENTE SORTIE:   VIOLET   
     ERREUR:   ROUGE   
     FERME:   BRUN  
+    ADMINISTRATEUR : BLACK
 
 # sont appeles dans le pygame pour affichage
 BOUTONS_PHYSIQUES:
@@ -87,6 +88,7 @@ journal:
     fichier: "logs/parking.log"
     niveau: "INFO"
 
+# sont appelé par tkinter pour parametrer son affichage
 auth_view:
     largeur_fenetre: 500
     hauteur_fenetre: 700
@@ -105,5 +107,5 @@ auth_view:
         font_ecran: Arial
         taille_titre: 18
         taille_texte: 14
-        taille_ecran: 16
+        taille_ecran: 16 
     
