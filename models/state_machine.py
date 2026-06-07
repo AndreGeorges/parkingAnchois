@@ -29,3 +29,4 @@ class Event(Enum):
     RETOUR_IDLE = "Retour a idle"
     FERME = "Ferme"
     DEMANDE_AUTH_ADMIN = "AUTHENTIFICATION ADMIN"
+    AUTH_ECHEC = "ECHEC D'AUTHENTIFICATION"

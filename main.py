@@ -111,6 +111,9 @@ def getEvent(etat, etat_precedent):
         return Event.RETOUR_IDLE  
     if idle_ferme.is_pressed:
         sleep(0.5)
+        global dernier_etat
+        shared= get_data()
+        dernier_etat = shared["etat"]
         return Event.DEMANDE_AUTH_ADMIN       
     # else:
     #     return Event.DEFAULT  # J'ai retiré ceci pour ne pas qu'il loop constamment
@@ -207,6 +210,12 @@ def parking_system():
                             event, event_precedent
                         )
                         etat = Etats.AUTH_ADMIN
+                    case Event.AUTH_ECHEC:
+                        #global dernier_etat
+                        event, event_precedent = eviter_surcharge_event(
+                            event, event_precedent
+                        )
+                        etat = Etats[dernier_etat]
 
                 match etat:
                     case Etats.IDLE:
@@ -223,18 +232,18 @@ def parking_system():
                     
                     case Etats.AUTH_ADMIN:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
-                        print(etat)
                         Authentification() # lancer l'interface d'authentification
                         shared = get_data()
                         code_saisi = shared["code_saisi"]
-                        print(code_saisi)
                         if code_saisi == CODE_SAISI["admin_password"]:
                             update_data(code_saisi="")
-                            event = Event.FERME
-                
+                            if dernier_etat == "FERME":
+                                event = Event.RETOUR_IDLE
+                            elif dernier_etat == "IDLE":
+                                event = Event.FERME            
                         else:
                             update_data(code_saisi="")
-                            event = Event.RETOUR_IDLE
+                            event = Event.AUTH_ECHEC
 
                     case Etats.ATTENTE_ENTREE:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
