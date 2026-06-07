@@ -109,12 +109,13 @@ def getEvent(etat, etat_precedent):
         return Event.ERREUR
     if err_idle.is_pressed:
         sleep(0.2)
-        global dernier_etat
-        shared= get_data()
-        dernier_etat = shared["etat"]
-        return Event.DEMANDE_AUTH_USAGER
+        if etat == Etats.ERREUR:
+            global dernier_etat
+            shared= get_data()
+            dernier_etat = shared["etat"]
+            return Event.DEMANDE_AUTH_USAGER
     if idle_ferme.is_pressed:
-        sleep(0.5)
+        sleep(0.2)
         shared= get_data()
         dernier_etat = shared["etat"]
         return Event.DEMANDE_AUTH_ADMIN       
@@ -247,6 +248,7 @@ def parking_system():
                     
                     case Etats.AUTH_ADMIN:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
+                        update_data(message=f"Niveau : {etat.value}")
                         Authentification() # lancer l'interface d'authentification
                         shared = get_data()
                         code_saisi = shared["code_saisi"]
@@ -255,9 +257,12 @@ def parking_system():
                             if dernier_etat == "FERME":
                                 event = Event.RETOUR_IDLE
                             elif dernier_etat == "IDLE":
-                                event = Event.FERME            
+                                event = Event.FERME
+                        elif code_saisi == "": 
+                            update_data(code_saisi="",message="Tentative Annulee")  
+                            event = Event.AUTH_ECHEC             
                         else:
-                            update_data(code_saisi="")
+                            update_data(code_saisi="",message="Mauvais Code")
                             event = Event.AUTH_ECHEC
 
 
@@ -266,6 +271,7 @@ def parking_system():
                         tentatives = shared["tentatives"]
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
                         if tentatives < CODE_SAISI["max_tentatives"]:
+                            update_data(message=f"Niveau : {etat.value}\nTentative : {tentatives+1}/3")
                             Authentification() # lancer l'interface d'authentification
                             shared = get_data()
                             code_saisi = shared["code_saisi"]
@@ -275,16 +281,17 @@ def parking_system():
                                 update_data(code_saisi="",tentatives = 0)
                                 event = Event.RETOUR_IDLE
                             elif code_saisi == "": 
-                                update_data(code_saisi="")  
+                                update_data(code_saisi="",message="Tentative Annulee")  
                                 event = Event.AUTH_ECHEC                             
                             else:
-                                update_data(code_saisi="",tentatives = tentatives+1)
+                                update_data(code_saisi="",tentatives = tentatives+1,message="Mauvais Code")
                                 event = Event.AUTH_ECHEC
                         else:
                             event = Event.DEMANDE_AUTH_SUPERADMIN
 
                     case Etats.AUTH_SUPERADMIN:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
+                        update_data(message=f"VOUS DEVEZ CONTACTER LE\n{etat.value}")
                         Authentification() # lancer l'interface d'authentification
                         shared = get_data()
                         code_saisi = shared["code_saisi"]
@@ -292,9 +299,10 @@ def parking_system():
                             update_data(code_saisi="")
                             event = Event.RETOUR_IDLE
                         elif code_saisi == "":
+                            update_data(code_saisi="",message="Tentative Annulee")
                             event = Event.AUTH_ECHEC            
                         else:
-                            update_data(code_saisi="")
+                            update_data(code_saisi="",message="Mauvais Code")
                             event = Event.DEMANDE_AUTH_SUPERADMIN
 
 

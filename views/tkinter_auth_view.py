@@ -1,5 +1,6 @@
 from tkinter import *
 from config.ui_config import get_color_rgb, get_AUTH
+from config.config_loader import CODE_SAISI
 from models.parking import update_data, get_data     # echanger les donnes avec pygame via shared_state
 
 
@@ -26,7 +27,11 @@ font_titre = (texte_info["font_titre"], texte_info["taille_titre"], texte_info["
 # texte
 couleur_texte = get_color_rgb(AUTH["couleur_texte"])
 texte = AUTH["texte"]
+texte_longueur = f"{texte} a {CODE_SAISI["longueur_code"]} chiffres"
 font_texte = (texte_info["font_texte"], texte_info["taille_texte"])
+
+# message 
+couleur_texte = get_color_rgb(AUTH["couleur_texte"])
 
 # clavier numérique
 boutons_numeriques = AUTH["boutons_numeriques"]
@@ -79,6 +84,8 @@ def charger_interface():
         global code_reel
         code_reel += key
         texte_ecran.set("*" * len(code_reel))  # Affiche des étoiles pour chaque caractère entré
+        if len(code_reel) >=CODE_SAISI["longueur_code"]:
+            valider()   
 
     # Fonctions des boutons fonctionnels
     def effacer():
@@ -119,12 +126,18 @@ def charger_interface():
     # Texte fixe qui ne change pas, pour le message "Entrez votre code : "
     def texte_fix(fenetre):
         global label_texte
-        label_texte = Label(fenetre, text=texte,bg=couleur_fond,  fg=couleur_texte, font=font_texte) #Crée un label pour le texte
+        label_texte = Label(fenetre, text=texte_longueur,bg=couleur_fond,  fg=couleur_texte, font=font_texte) #Crée un label pour le texte
         label_texte.place(relx=0.5, rely=0.12, anchor="center")  #Place le label de texte du message
+
+    def message(fenetre):
+        global label_message
+        shared = get_data()
+        message = shared["message"]
+        label_message = Label(fenetre, text=message,bg=couleur_fond,  fg=couleur_texte, font=font_texte) #Crée un label pour le texte
+        label_message.place(relx=0.5, rely=0.27, anchor="center")  #Place le label de texte du message
 
     # Création de la fenêtre principale
     def create_window(fenetre):
-        #fenetre = Tk()
         centrer_fenetre(fenetre, largeur_fenetre, hauteur_fenetre)
         fenetre.configure(bg=couleur_fond,borderwidth=5, relief="sunken") #Configure la couleur de fond et les bordures de la fenêtre
         fenetre.title(nom_fenetre) # titre au cas où overridedirect est retiré
@@ -141,11 +154,12 @@ def charger_interface():
     
     create_window(fenetre) #Appelle la fonction pour créer la fenêtre principale
     texte_fix(fenetre) #Appelle la fonction pour créer le texte fixe
+    message(fenetre)
     draw_barre_titre(fenetre) #Appelle la fonction pour créer la barre de titre personnalisée
     ecran(fenetre) #Appelle la fonction pour créer l'écran de saisie du code
     draw_keyboard(fenetre) #Appelle la fonction pour créer le clavier numérique
     draw_boutons(fenetre) #Appelle la fonction pour créer les boutons fonctionnels (Effacer, Valider, Annuler)
-        
+ 
         
         
     

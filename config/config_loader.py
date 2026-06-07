@@ -41,6 +41,7 @@ LOG_LEVEL = JOURNAL["niveau"]
 # Pour Authentification par tkinter
 AUTH_VIEW = CONFIG["auth_view"]
 
+# Pour la saisi des codes et options reliés à celle-ci
 CODE_SAISI = CONFIG["security"]
 
 print(LOG_LEVEL)

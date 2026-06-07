@@ -4,6 +4,7 @@ parking:
 
 # le tkinter viendra chercher ces infos ici:
 security:
+    longueur_code: 7
     code_secret: "2222222"
     admin_password: "8888888"
     super_admin_password: "5555555"
@@ -95,7 +96,7 @@ auth_view:
     largeur_fenetre: 500
     hauteur_fenetre: 700
     nom_fenetre: "Parking OZ Anchois"
-    texte: "Entrez votre code :"
+    texte: "Entrez votre code"
     couleur_fond: "VERT_POMME"
     couleur_barre_titre: "BLUE"
     couleur_titre: "WHITE"
