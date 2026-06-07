@@ -120,7 +120,7 @@ def charger_interface(): # fonction premiere contenant les autres fonctions.  C'
         
         # Création de la Barre de titre
     def draw_barre_titre(fenetre):
-        #fenetre.overrideredirect(True)          # Retire les bordures et la barre de titre de la fenêtre
+        fenetre.overrideredirect(True)          # Retire les bordures et la barre de titre de la fenêtre
         frame_titre =Frame(fenetre, bg=couleur_barre_titre, height=38,borderwidth=5, relief="groove")  #Crée une frame pour la barre de titre personnalisée
         frame_titre.pack(fill="x", side="top",padx=10,pady=10)   #Place la frame en haut de la fenêtre mais décalé un peu vers le bas pour laisser un espace entre la barre de titre et le bord de la fenêtre
         frame_titre.pack_propagate(False)   #Empêche la frame de redimensionner automatiquement pour s'adapter à son contenu

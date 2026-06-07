@@ -254,7 +254,7 @@ def parking_system():
                         shared = get_data()
                         code_saisi = shared["code_saisi"] # recuperer le code saisi dans l'interface d'authentification
                         if code_saisi == CODE_SAISI["admin_password"]: # verifier si le code saisi est identique a celui dans le fichier de config
-                            update_data(code_saisi=""), #vide le code saisi du shared_state
+                            update_data(code_saisi="",message="Autorisation Accorde"), #vide le code saisi du shared_state
                             if dernier_etat == "FERME":
                                 event = Event.RETOUR_IDLE
                             elif dernier_etat == "IDLE":
@@ -279,7 +279,7 @@ def parking_system():
                             print(code_saisi)
                             print(CODE_SAISI["code_secret"])
                             if code_saisi == CODE_SAISI["code_secret"]: # verifier si le code saisi est identique a celui dans le fichier de config
-                                update_data(code_saisi="",tentatives = 0) # reinitialiser le nombre de tentatives si l'authentification reussit, vide le code saisi du shared_state
+                                update_data(code_saisi="",tentatives = 0,message="Autorisation Accorde") # reinitialiser le nombre de tentatives si l'authentification reussit, vide le code saisi du shared_state
                                 event = Event.RETOUR_IDLE
                             elif code_saisi == "":          # si l'utilisateur annule ou laisse le champ vide, aucune tentative n'est compilee, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC , vide le code saisi du shared_state
                                 update_data(code_saisi="",message="Tentative Annulee")  
@@ -297,7 +297,7 @@ def parking_system():
                         shared = get_data()
                         code_saisi = shared["code_saisi"]
                         if code_saisi == CODE_SAISI["super_admin_password"]: # verifier si le code saisi est identique a celui dans le fichier de config
-                            update_data(code_saisi="") #vide le code saisi du shared_state
+                            update_data(code_saisi="",message="Autorisation Accorde") #vide le code saisi du shared_state
                             event = Event.RETOUR_IDLE
                         elif code_saisi == "":          # si l'utilisateur annule ou laisse le champ vide, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC, vide le code saisi du shared_state
                             update_data(code_saisi="",message="Tentative Annulee")
