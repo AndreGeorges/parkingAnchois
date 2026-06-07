@@ -194,6 +194,13 @@ Bibliotheque à installer :
  
  ***Les problèmes connus ou limites du projet*** 
 
+Il y a une ligne de configuration qui n'a pas ete transféré dans le yaml pour le fichier tkinter.
+Elle est au milieu de tout et fait tres bien son travail pareil
+Des fois le programme réagi mal à plusieurs appuis des boutons physique rapidement entre les changements d'etats
+le log qui se declenche a l'ouverture et fermeture se declenche un peu trop souvent
+le temps se compte en secondes quand on affiche des heures.  Plusieurs clients TRÈS insatisfaits
+certaines erreurs retournent a l'etat erreur mais d'autres font encore planter le programme completement
+
 
 
 ********************  NOTES SUR LE DIAGRAMME D'ETAT **************
