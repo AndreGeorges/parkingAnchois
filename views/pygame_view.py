@@ -109,7 +109,7 @@ def draw_button(screen, font):
         
         y_offset += 45
 
-def bouton_Journal(screen,font):
+def bouton_Journal(screen,font):                    # Bouton pour l'export des logs
     boutons_journal = pygame.Rect(365,744,120,40)
     accueil="EXP/LOG"
     pygame.draw.rect(screen,get_color("VIOLET"),boutons_journal,border_radius=10)
@@ -151,9 +151,9 @@ while running:
                 )
                 input_text = ""
 
-                #  Le bouton accueil ne fonctionne presentement pas
-            if boutons_journal.collidepoint(event.pos):                # bouton retour a l'accueil a implementer
-                exporter_log()
+                
+            if boutons_journal.collidepoint(event.pos):      # Bouton pour l'export de logs
+                exporter_log()                                  # fait appe la la fonction dans exports.export_journal
 
             for bouton,duree in liste_bouton:               # Boutons pour la selection de duree 
                 if bouton.collidepoint(event.pos):              #ils retournent la duree de la liste TARIF donc peuvent etre changé sans faire plein d modifications
@@ -286,9 +286,10 @@ while running:
         bouton_duree = draw_button(screen,font)
     else:
         input_box, key_rect, delete_button, enter_button = draw_keyboard(screen, font, input_text)  
+
+    # Bouton pour l'eportation des logs
     boutons_journal = bouton_Journal(screen,font)
-    # le bouton accueil ne fonctionne presentement pas
-    #retour_accueil = bouton_accueil(screen,font) # affiche le bouton retour a l'accueil
+
 
 
     # affiche BOUTONS PHYSIQUES

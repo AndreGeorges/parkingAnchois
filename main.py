@@ -276,8 +276,6 @@ def parking_system():
                             Authentification() # lancer l'interface d'authentification
                             shared = get_data()
                             code_saisi = shared["code_saisi"]
-                            print(code_saisi)
-                            print(CODE_SAISI["code_secret"])
                             if code_saisi == CODE_SAISI["code_secret"]: # verifier si le code saisi est identique a celui dans le fichier de config
                                 update_data(code_saisi="",tentatives = 0,message="Autorisation Accorde") # reinitialiser le nombre de tentatives si l'authentification reussit, vide le code saisi du shared_state
                                 event = Event.RETOUR_IDLE

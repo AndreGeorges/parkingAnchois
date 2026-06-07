@@ -25,7 +25,7 @@ def logevent(event):
     message_code_errone = f"Un Mauvais code {etat} a ete saisi"
     message_code_superadmin = "UN CODE SUPERADMIN ERRONE A ETE SAISI"
    
-
+# Event vérifié dans le state machine
     match event:
         case "Vehicule detecte":
             logging.info(message_detection)
@@ -48,17 +48,23 @@ def logevent(event):
         
 
 # Log des changements d'etats -- se retrouve dans utils
-def logchetat(etat,etat_precedent):
+def logchetat(etat,etat_precedent):     # etat vérifié dans le state_machine
+
+    # message pour les etats
     message_fermeture = f"Le Parking a ete ferme"
     message_ouverture = f"Le Parking est ouvert"
     message_erreur =f"Vous etes sorti de l'etat d'erreur"
     message_superadmin =f"Un SUPERADMIN a ete necessaire pour sortir de ce pepin"
+
+    #log du changement d'etat
     if isinstance(etat,  Etats):        # verifie les enums pour associer aux values 
         etat = etat.value
     if isinstance(etat_precedent,  Etats):      # verifie les enums pour associer aux values.  l'etat precedent n'avait pas d'enum mais il peut se comparer a l'enum Etats 
         etat_precedent = etat_precedent.value
     message_ch_etat = (f"Changement d'etat : {etat_precedent} ---> {etat}")
     logging.info(message_ch_etat)
+
+    # Changement d'etat surveillé
     match etat, etat_precedent:
         case "IDLE","ADMINISTRATEUR":
             logging.info(message_ouverture)
