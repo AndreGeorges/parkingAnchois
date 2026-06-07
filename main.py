@@ -68,7 +68,7 @@ def temps_expire():
                 break   
     sleep(0.2)   
 
-def Authentification():
+def Authentification(): # fonction pour faire un changement facilement si l'interface tkinter est changée
     charger_interface() # cette fonction se trouve dans tkinter_auth_view et lance l'interface d'authentification
 
     
@@ -113,12 +113,12 @@ def getEvent(etat, etat_precedent):
         if etat == Etats.ERREUR:
             global dernier_etat
             shared= get_data()
-            dernier_etat = shared["etat"]
+            dernier_etat = shared["etat"]  # On place en memoire l'etat avant de demander une authentification pour pouvoir y retourner en cas de code incorrect ou que l'utilisateur pese sur le bouton annuler
             return Event.DEMANDE_AUTH_USAGER
     if idle_ferme.is_pressed:
         sleep(0.2)
         shared= get_data()
-        dernier_etat = shared["etat"]
+        dernier_etat = shared["etat"]# On place en memoire l'etat avant de demander une authentification pour pouvoir y retourner en cas de code incorrect ou que l'utilisateur pese sur le bouton 
         return Event.DEMANDE_AUTH_ADMIN       
     # else:
     #     return Event.DEFAULT  # J'ai retiré ceci pour ne pas qu'il loop constamment
@@ -232,7 +232,7 @@ def parking_system():
                         event, event_precedent = eviter_surcharge_event(
                             event, event_precedent
                         )
-                        etat = Etats[dernier_etat]
+                        etat = Etats[dernier_etat]  # on utilise le dernier etat mis en memoire au moment du get event err_idle et idle_ferme
 
                 match etat:
                     case Etats.IDLE:
@@ -247,27 +247,27 @@ def parking_system():
                         event = getEvent(etat, etat_precedent)
                         sleep(0.5)
                     
-                    case Etats.AUTH_ADMIN:
+                    case Etats.AUTH_ADMIN:   # on lance l'interface d'authentification et on verifie le code saisi. Si le code est correct, on retourne a IDLE ou FERME selon le dernier etat. Si le code est incorrect ou si l'utilisateur annule, il est envoyé a AUTH_ECHEC
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
-                        update_data(message=f"Niveau : {etat.value}")
+                        update_data(message=f"Niveau : {etat.value}") # afficher le niveau d'acces dans tkinter
                         Authentification() # lancer l'interface d'authentification
                         shared = get_data()
-                        code_saisi = shared["code_saisi"]
-                        if code_saisi == CODE_SAISI["admin_password"]:
-                            update_data(code_saisi="")
+                        code_saisi = shared["code_saisi"] # recuperer le code saisi dans l'interface d'authentification
+                        if code_saisi == CODE_SAISI["admin_password"]: # verifier si le code saisi est identique a celui dans le fichier de config
+                            update_data(code_saisi=""), #vide le code saisi du shared_state
                             if dernier_etat == "FERME":
                                 event = Event.RETOUR_IDLE
                             elif dernier_etat == "IDLE":
                                 event = Event.FERME
-                        elif code_saisi == "": 
+                        elif code_saisi == "":  # si l'utilisateur annule ou laisse le champ vide, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC, vide le code saisi du shared_state
                             update_data(code_saisi="",message="Tentative Annulee")  
                             event = Event.AUTH_ECHEC             
-                        else:
+                        else:                   # si le code saisi est incorrect, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC, vide le code saisi du shared_state
                             update_data(code_saisi="",message="Mauvais Code")
                             event = Event.AUTH_ECHEC
 
 
-                    case Etats.AUTH_USAGER:
+                    case Etats.AUTH_USAGER:     # on lance l'interface d'authentification et on verifie le code saisi. Si le code est correct, on retourne a IDLE. Si l'utilisateur atteint le nombre max de tentatives, il est envoyé a AUTH_SUPERADMIN
                         shared = get_data()
                         tentatives = shared["tentatives"]
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
@@ -278,10 +278,10 @@ def parking_system():
                             code_saisi = shared["code_saisi"]
                             print(code_saisi)
                             print(CODE_SAISI["code_secret"])
-                            if code_saisi == CODE_SAISI["code_secret"]:
-                                update_data(code_saisi="",tentatives = 0)
+                            if code_saisi == CODE_SAISI["code_secret"]: # verifier si le code saisi est identique a celui dans le fichier de config
+                                update_data(code_saisi="",tentatives = 0) # reinitialiser le nombre de tentatives si l'authentification reussit, vide le code saisi du shared_state
                                 event = Event.RETOUR_IDLE
-                            elif code_saisi == "": 
+                            elif code_saisi == "":          # si l'utilisateur annule ou laisse le champ vide, aucune tentative n'est compilee, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC , vide le code saisi du shared_state
                                 update_data(code_saisi="",message="Tentative Annulee")  
                                 event = Event.AUTH_ECHEC                             
                             else:
@@ -290,19 +290,19 @@ def parking_system():
                         else:
                             event = Event.DEMANDE_AUTH_SUPERADMIN
 
-                    case Etats.AUTH_SUPERADMIN:
+                    case Etats.AUTH_SUPERADMIN:     # on lance l'interface d'authentification et on verifie le code saisi. Si le code est correct, on retourne a IDLE. Si le code est incorrect, la fenetre d'authentification se réouvre.  Si l'utilisateur annule, il est redirige a AUTH_ECHEC
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
                         update_data(message=f"VOUS DEVEZ CONTACTER LE\n{etat.value}")
                         Authentification() # lancer l'interface d'authentification
                         shared = get_data()
                         code_saisi = shared["code_saisi"]
-                        if code_saisi == CODE_SAISI["super_admin_password"]:
-                            update_data(code_saisi="")
+                        if code_saisi == CODE_SAISI["super_admin_password"]: # verifier si le code saisi est identique a celui dans le fichier de config
+                            update_data(code_saisi="") #vide le code saisi du shared_state
                             event = Event.RETOUR_IDLE
-                        elif code_saisi == "":
+                        elif code_saisi == "":          # si l'utilisateur annule ou laisse le champ vide, la fenetre d'authentification se ferme puis il est redirige a AUTH_ECHEC, vide le code saisi du shared_state
                             update_data(code_saisi="",message="Tentative Annulee")
                             event = Event.AUTH_ECHEC            
-                        else:
+                        else:               # si le code saisi est incorrect, la fenetre d'authentification se ferme puis se re-ouvre, vide le code saisi du shared_state
                             update_data(code_saisi="",message="Mauvais Code")
                             event = Event.DEMANDE_AUTH_SUPERADMIN
 
