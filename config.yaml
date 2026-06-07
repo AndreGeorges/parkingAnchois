@@ -101,14 +101,16 @@ auth_view:
     couleur_barre_titre: "BLUE"
     couleur_titre: "WHITE"
     couleur_texte: "BLACK"
+    couleur_message: "BLACK"
     boutons_numeriques: [["1","2","3"], ["4","5","6"], ["7","8","9"], ["","0",""]]
     couleur_ecran: "WHITE"
     info_texte: 
         font_titre: Arial bold
         style_titre: "bold italic underline"
         font_texte: Arial
+        font_message: Arial bold
         font_ecran: Arial
         taille_titre: 18
         taille_texte: 14
+        taille_message: 15
         taille_ecran: 16 
-    

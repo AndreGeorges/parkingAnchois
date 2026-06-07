@@ -19,6 +19,9 @@ hauteur_fenetre = AUTH["hauteur_fenetre"]
 nom_fenetre = AUTH["nom_fenetre"]
 couleur_fond = get_color_rgb(AUTH["couleur_fond"])
 
+# longueur du code, ce qui permet de lancer valider apres la longueur du code affiché dans config
+maxlen = CODE_SAISI["longueur_code"]
+
 # barre de titre
 couleur_barre_titre = get_color_rgb(AUTH["couleur_barre_titre"])
 couleur_titre = get_color_rgb(AUTH["couleur_titre"])
@@ -27,11 +30,12 @@ font_titre = (texte_info["font_titre"], texte_info["taille_titre"], texte_info["
 # texte
 couleur_texte = get_color_rgb(AUTH["couleur_texte"])
 texte = AUTH["texte"]
-texte_longueur = f"{texte} a {CODE_SAISI["longueur_code"]} chiffres"
+texte_longueur = f"{texte} a {maxlen} chiffres"  # texte affichant combien de chiffres sont demande pour le code  basé sur le message et la longueur max venant de config
 font_texte = (texte_info["font_texte"], texte_info["taille_texte"])
 
 # message 
-couleur_texte = get_color_rgb(AUTH["couleur_texte"])
+couleur_message = get_color_rgb(AUTH["couleur_message"])
+font_message = (texte_info["font_message"], texte_info["taille_message"])
 
 # clavier numérique
 boutons_numeriques = AUTH["boutons_numeriques"]
@@ -43,10 +47,10 @@ font_ecran = (texte_info["font_ecran"], texte_info["taille_ecran"])
 
 #================================ Fonctions de l'interface utilisateur ====================================
 
-def charger_interface():
+def charger_interface(): # fonction premiere contenant les autres fonctions.  C'est elle qui est appelé par le main
     global code_reel, texte_ecran, boutons_fonctionnels
     fenetre = Tk()
-    code_reel = ""
+    code_reel = ""  # remet le code reel à "vide" chaques fois que la fenetre d'authentification est ouverte
     texte_ecran = StringVar() #Variable pour stocker le texte affiché à l'écran, utilisée pour capturer les événements de clavier
 
 
@@ -84,7 +88,7 @@ def charger_interface():
         global code_reel
         code_reel += key
         texte_ecran.set("*" * len(code_reel))  # Affiche des étoiles pour chaque caractère entré
-        if len(code_reel) >=CODE_SAISI["longueur_code"]:
+        if len(code_reel) >= maxlen :
             valider()   
 
     # Fonctions des boutons fonctionnels
@@ -96,12 +100,12 @@ def charger_interface():
     def valider():
         global code_reel
         update_data(code_saisi=code_reel)
-        fenetre.destroy()
+        fenetre.destroy()  # ferme la fenetre apres validation bonne ou mauvaise
         
 
     def annuler():
-        update_data(code_saisi="")
-        fenetre.destroy()
+        update_data(code_saisi="") # Vide le code saisi du shared state
+        fenetre.destroy() # ferme la fenetre apres validation bonne ou mauvaise
 
     # Dictionnaire pour stocker les propriétés des boutons fonctionnels nom du bouton, couleur de fond et la commande associée
     boutons_fonctionnels = { "Valider":{"bg":"green","commande":valider},"Effacer":{"bg":"orange","commande":effacer}, "Annuler":{"bg":"red","commande":annuler}}
