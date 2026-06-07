@@ -65,7 +65,6 @@ def logchetat(etat,etat_precedent):
         case "FERME","ADMINISTRATEUR":
             logging.info(message_fermeture)
         case "IDLE","SUPER ADMINISTRATEUR":
-            i=0
             logging.info(message_superadmin)
         case "IDLE","USAGER":
             logging.info(message_erreur)
