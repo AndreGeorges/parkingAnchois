@@ -54,7 +54,7 @@ SCREEN_COLOR:
     FERME:   BRUN  
     ADMINISTRATEUR : BLACK
     USAGER : BLACK
-    SUPER ADMIN : BLACK
+    SUPER ADMINISTRATEUR : BLACK
 
 # sont appeles dans le pygame pour affichage
 BOUTONS_PHYSIQUES:
