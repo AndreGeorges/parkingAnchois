@@ -13,7 +13,8 @@ data= {
 "user_input": "",
 "input_ready": False,
 "keyboard":False,
-"code_saisi":""
+"code_saisi":"",
+"tentatives":0
 }
 # cette fonction recupere les variables utilisees dans le main (apres le while True)
 def update_data(**kwargs):    # **kwargs permet de recevoir un nombre variable d’arguments nommés dans une fonction.

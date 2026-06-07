@@ -70,6 +70,7 @@ def temps_expire():
 def Authentification():
     charger_interface() # cette fonction se trouve dans tkinter_auth_view et lance l'interface d'authentification
 
+    
 
 
         
@@ -108,10 +109,12 @@ def getEvent(etat, etat_precedent):
         return Event.ERREUR
     if err_idle.is_pressed:
         sleep(0.2)
-        return Event.RETOUR_IDLE  
+        global dernier_etat
+        shared= get_data()
+        dernier_etat = shared["etat"]
+        return Event.DEMANDE_AUTH_USAGER
     if idle_ferme.is_pressed:
         sleep(0.5)
-        global dernier_etat
         shared= get_data()
         dernier_etat = shared["etat"]
         return Event.DEMANDE_AUTH_ADMIN       
@@ -210,8 +213,20 @@ def parking_system():
                             event, event_precedent
                         )
                         etat = Etats.AUTH_ADMIN
+
+                    case Event.DEMANDE_AUTH_USAGER:
+                        event, event_precedent = eviter_surcharge_event(
+                            event, event_precedent
+                        )
+                        etat = Etats.AUTH_USAGER
+
+                    case Event.DEMANDE_AUTH_SUPERADMIN:
+                        event, event_precedent = eviter_surcharge_event(
+                            event, event_precedent
+                        )
+                        etat = Etats.AUTH_SUPERADMIN
+
                     case Event.AUTH_ECHEC:
-                        #global dernier_etat
                         event, event_precedent = eviter_surcharge_event(
                             event, event_precedent
                         )
@@ -244,6 +259,44 @@ def parking_system():
                         else:
                             update_data(code_saisi="")
                             event = Event.AUTH_ECHEC
+
+
+                    case Etats.AUTH_USAGER:
+                        shared = get_data()
+                        tentatives = shared["tentatives"]
+                        etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
+                        if tentatives < CODE_SAISI["max_tentatives"]:
+                            Authentification() # lancer l'interface d'authentification
+                            shared = get_data()
+                            code_saisi = shared["code_saisi"]
+                            print(code_saisi)
+                            print(CODE_SAISI["code_secret"])
+                            if code_saisi == CODE_SAISI["code_secret"]:
+                                update_data(code_saisi="",tentatives = 0)
+                                event = Event.RETOUR_IDLE
+                            elif code_saisi == "": 
+                                update_data(code_saisi="")  
+                                event = Event.AUTH_ECHEC                             
+                            else:
+                                update_data(code_saisi="",tentatives = tentatives+1)
+                                event = Event.AUTH_ECHEC
+                        else:
+                            event = Event.DEMANDE_AUTH_SUPERADMIN
+
+                    case Etats.AUTH_SUPERADMIN:
+                        etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)
+                        Authentification() # lancer l'interface d'authentification
+                        shared = get_data()
+                        code_saisi = shared["code_saisi"]
+                        if code_saisi == CODE_SAISI["super_admin_password"]:
+                            update_data(code_saisi="")
+                            event = Event.RETOUR_IDLE
+                        elif code_saisi == "":
+                            event = Event.AUTH_ECHEC            
+                        else:
+                            update_data(code_saisi="")
+                            event = Event.DEMANDE_AUTH_SUPERADMIN
+
 
                     case Etats.ATTENTE_ENTREE:
                         etat, etat_precedent = eviter_surcharge_etat(etat, etat_precedent)

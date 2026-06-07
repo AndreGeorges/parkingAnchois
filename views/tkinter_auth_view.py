@@ -93,9 +93,8 @@ def charger_interface():
         
 
     def annuler():
-        global code_reel
-        code_reel = ""
-        texte_ecran.set("")  # Efface l'affichage de l'écran
+        update_data(code_saisi="")
+        fenetre.destroy()
 
     # Dictionnaire pour stocker les propriétés des boutons fonctionnels nom du bouton, couleur de fond et la commande associée
     boutons_fonctionnels = { "Valider":{"bg":"green","commande":valider},"Effacer":{"bg":"orange","commande":effacer}, "Annuler":{"bg":"red","commande":annuler}}
