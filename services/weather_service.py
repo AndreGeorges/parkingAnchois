@@ -25,28 +25,27 @@ def get_weather():
         temperature = data["main"]["temp"]
         description = data["weather"][0]["description"]
         icon_code = data["weather"][0]["icon"]
-
-        icon_url = (        # aller chercher l'icone de openweathermap en temps reel. il s'update a l'ecran dans le pygame
-            f"https://openweathermap.org/img/wn/"
-            f"{icon_code}@2x.png"
-        )
-
-        icon_response = requests.get(icon_url)
-
-        image_file = io.BytesIO(icon_response.content)    # utiliser la bibliotheque io pour traiter l'image de l'icone
-
-        verif_icon = os.listdir("assets/weather_icons")     # Verification si l"image existe deja dans le dossier
-        if f"{icon_code}.png" not in verif_icon:            # Si non, enregistre l'image
-            with open(f"assets/weather_icons/{icon_code}.png","wb") as icon_local:
-                icon_local.write(icon_response.content)
-
         try:
+            icon_url = (        # aller chercher l'icone de openweathermap en temps reel. il s'update a l'ecran dans le pygame
+                f"https://openweathermap.org/img/wn/"
+                f"{icon_code}@2x.png"
+            )
+
+            icon_response = requests.get(icon_url)
+
+            image_file = io.BytesIO(icon_response.content)    # utiliser la bibliotheque io pour traiter l'image de l'icone
+
+            verif_icon = os.listdir("assets/weather_icons")     # Verification si l"image existe deja dans le dossier
+            if f"{icon_code}.png" not in verif_icon:            # Si non, enregistre l'image
+                with open(f"assets/weather_icons/{icon_code}.png","wb") as icon_local:
+                    icon_local.write(icon_response.content)
+
             image_local =pygame.image.load(f"assets/weather_icons/{icon_code}.png").convert_alpha()   # image_local utilisé au lieu de image precedement utilisé
             image = pygame.image.load(image_file).convert_alpha()    # convert_alpha garde la transparence de l'image. pour l'afficher sur un fond colore
         except:
             message = f"L'icone WeatherMap n'a pas chargé"
             logapi(message)
-            image_local= pygame.image.load(f"assets/weather_icons/Defaut_Probleme.png").convert_alpha()
+            image_local= pygame.image.load(f"assets/weather_icons/Defaut_Probleme.png")
 
         api_connecte = True # Une fois connecté, envoi le log qu'il est connecté
         api_connecte_precedent = False
